@@ -1,0 +1,9 @@
+C:\work\charp\WinFormApp\Animation\Animation\bin\Debug\Animation.exe.config
+C:\work\charp\WinFormApp\Animation\Animation\bin\Debug\Animation.exe
+C:\work\charp\WinFormApp\Animation\Animation\bin\Debug\Animation.pdb
+C:\work\charp\WinFormApp\Animation\Animation\obj\Debug\Animation.csprojResolveAssemblyReference.cache
+C:\work\charp\WinFormApp\Animation\Animation\obj\Debug\Animation.Form1.resources
+C:\work\charp\WinFormApp\Animation\Animation\obj\Debug\Animation.Properties.Resources.resources
+C:\work\charp\WinFormApp\Animation\Animation\obj\Debug\Animation.csproj.GenerateResource.Cache
+C:\work\charp\WinFormApp\Animation\Animation\obj\Debug\Animation.exe
+C:\work\charp\WinFormApp\Animation\Animation\obj\Debug\Animation.pdb
