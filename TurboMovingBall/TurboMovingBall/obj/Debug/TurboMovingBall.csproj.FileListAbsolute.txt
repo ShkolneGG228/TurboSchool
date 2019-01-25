@@ -1,0 +1,10 @@
+C:\work\charp\WinFormApp\TurboMovingBall\TurboMovingBall\bin\Debug\TurboMovingBall.exe.config
+C:\work\charp\WinFormApp\TurboMovingBall\TurboMovingBall\bin\Debug\TurboMovingBall.exe
+C:\work\charp\WinFormApp\TurboMovingBall\TurboMovingBall\bin\Debug\TurboMovingBall.pdb
+C:\work\charp\WinFormApp\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.csprojResolveAssemblyReference.cache
+C:\work\charp\WinFormApp\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.Form1.resources
+C:\work\charp\WinFormApp\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.Properties.Resources.resources
+C:\work\charp\WinFormApp\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.csproj.GenerateResource.Cache
+C:\work\charp\WinFormApp\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.exe
+C:\work\charp\WinFormApp\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.pdb
+C:\work\charp\WinFormApp\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.Resources.resources
