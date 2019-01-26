@@ -24,17 +24,18 @@ namespace TurboMovingBall
 
         private void trackBar1_Scroll(object sender, EventArgs e)
         {
+            IsRandom = false;
             for(int i = 0; i < ball.Count; i++)
             {
                 ball[i].SpeedX = trackBar1.Value;
                 if (ball[i].IsToLeft) { ball[i].SpeedX *= -1; }
             }        
             label3.Text = Convert.ToString(trackBar1.Value);
-            //DateTime data = new DateTime();
         }
 
         private void trackBar2_Scroll(object sender, EventArgs e)
         {
+            IsRandom = false;
             for(int i = 0; i < ball.Count; i++)
             {
                 ball[i].SpeedY = trackBar2.Value;
@@ -84,12 +85,11 @@ namespace TurboMovingBall
                 trackBar2_Scroll(sender, e);
             }else
             {
-                ball[ball.Count - 1].SpeedX = rnd.Next(1, 10);
-                ball[ball.Count - 1].SpeedY = rnd.Next(1, 10);
+                    ball[ball.Count - 1].SpeedX = rnd.Next(-10, 10);
+                    ball[ball.Count - 1].SpeedY = rnd.Next(-10, 10);            
             }
             
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -97,8 +97,6 @@ namespace TurboMovingBall
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            /*trackBar1_Scroll(sender,e);
-            trackBar2_Scroll(sender, e);*/
             button3_Click(sender, e);
         }
 
@@ -118,8 +116,8 @@ namespace TurboMovingBall
         {
             for(int i = 0; i < ball.Count; i++)
             {
-                ball[i].SpeedX = rnd.Next(1, 10);
-                ball[i].SpeedY = rnd.Next(1, 10);
+                ball[i].SpeedX = rnd.Next(-10, 10);
+                ball[i].SpeedY = rnd.Next(-10, 10);
             }
             label3.Text = "скорость на каждом шаре рандомная";
             label4.Text = "скорость на каждом шаре рандомная";
