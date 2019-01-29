@@ -60,62 +60,58 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage4 = new System.Windows.Forms.TabPage();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.label11 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.label12 = new System.Windows.Forms.Label();
             this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.tabPage11 = new System.Windows.Forms.TabPage();
-            this.tabPage12 = new System.Windows.Forms.TabPage();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
             this.panel8 = new System.Windows.Forms.Panel();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.label13 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton12 = new System.Windows.Forms.RadioButton();
             this.label14 = new System.Windows.Forms.Label();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.tabPage14 = new System.Windows.Forms.TabPage();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
+            this.checkBox6 = new System.Windows.Forms.CheckBox();
+            this.checkBox5 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
             this.panel11 = new System.Windows.Forms.Panel();
             this.radioButton13 = new System.Windows.Forms.RadioButton();
             this.radioButton14 = new System.Windows.Forms.RadioButton();
             this.radioButton15 = new System.Windows.Forms.RadioButton();
             this.label18 = new System.Windows.Forms.Label();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
             this.panel12 = new System.Windows.Forms.Panel();
             this.checkBox10 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox14 = new System.Windows.Forms.CheckBox();
             this.label19 = new System.Windows.Forms.Label();
+            this.tabPage11 = new System.Windows.Forms.TabPage();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.label23 = new System.Windows.Forms.Label();
             this.checkBox15 = new System.Windows.Forms.CheckBox();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
@@ -123,19 +119,23 @@
             this.checkBox19 = new System.Windows.Forms.CheckBox();
             this.checkBox20 = new System.Windows.Forms.CheckBox();
             this.label20 = new System.Windows.Forms.Label();
+            this.tabPage12 = new System.Windows.Forms.TabPage();
             this.panel14 = new System.Windows.Forms.Panel();
             this.radioButton16 = new System.Windows.Forms.RadioButton();
             this.radioButton17 = new System.Windows.Forms.RadioButton();
             this.radioButton18 = new System.Windows.Forms.RadioButton();
             this.label21 = new System.Windows.Forms.Label();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
             this.radioButton19 = new System.Windows.Forms.RadioButton();
             this.radioButton20 = new System.Windows.Forms.RadioButton();
             this.radioButton21 = new System.Windows.Forms.RadioButton();
             this.label22 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.label23 = new System.Windows.Forms.Label();
+            this.tabPage14 = new System.Windows.Forms.TabPage();
+            this.label17 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -151,28 +151,28 @@
             this.tabPage3.SuspendLayout();
             this.tabControl2.SuspendLayout();
             this.tabPage4.SuspendLayout();
-            this.tabPage5.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.tabPage6.SuspendLayout();
-            this.tabPage7.SuspendLayout();
-            this.tabPage8.SuspendLayout();
-            this.tabPage9.SuspendLayout();
-            this.tabPage10.SuspendLayout();
-            this.tabPage11.SuspendLayout();
-            this.tabPage12.SuspendLayout();
-            this.tabPage13.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.panel9.SuspendLayout();
+            this.tabPage8.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.tabPage14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.tabPage9.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.tabPage10.SuspendLayout();
             this.panel12.SuspendLayout();
+            this.tabPage11.SuspendLayout();
             this.panel13.SuspendLayout();
+            this.tabPage12.SuspendLayout();
             this.panel14.SuspendLayout();
+            this.tabPage13.SuspendLayout();
             this.panel15.SuspendLayout();
+            this.tabPage14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -586,6 +586,36 @@
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Задание 3";
             // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.ForeColor = System.Drawing.Color.Silver;
+            this.button4.Location = new System.Drawing.Point(380, 661);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(136, 33);
+            this.button4.TabIndex = 2;
+            this.button4.Text = "Пройти заново";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.ForeColor = System.Drawing.Color.Silver;
+            this.button3.Location = new System.Drawing.Point(28, 661);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(136, 33);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Результат";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // tabControl2
             // 
             this.tabControl2.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
@@ -617,29 +647,6 @@
             this.tabPage4.TabIndex = 0;
             this.tabPage4.Text = "Вопрос 1";
             // 
-            // tabPage5
-            // 
-            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage5.Controls.Add(this.panel7);
-            this.tabPage5.Location = new System.Drawing.Point(4, 26);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(753, 625);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "Вопрос 2";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label11.Location = new System.Drawing.Point(88, 18);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(447, 68);
-            this.label11.TabIndex = 0;
-            this.label11.Text = "Какое свойство массивов\r\nпозволяет узнать его длину?";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -647,34 +654,11 @@
             this.panel6.Controls.Add(this.radioButton2);
             this.panel6.Controls.Add(this.radioButton1);
             this.panel6.Controls.Add(this.label11);
-            this.panel6.Location = new System.Drawing.Point(51, 54);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(3, 3);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(635, 525);
+            this.panel6.Size = new System.Drawing.Size(747, 525);
             this.panel6.TabIndex = 1;
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.radioButton1.Location = new System.Drawing.Point(97, 143);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(82, 22);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.Text = ".Size()";
-            this.radioButton1.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.radioButton2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.radioButton2.Location = new System.Drawing.Point(97, 250);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(82, 22);
-            this.radioButton2.TabIndex = 2;
-            this.radioButton2.Text = ".Length";
-            this.radioButton2.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
@@ -688,6 +672,53 @@
             this.radioButton3.Text = ".Count";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton2.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.radioButton2.Location = new System.Drawing.Point(97, 250);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(82, 22);
+            this.radioButton2.TabIndex = 2;
+            this.radioButton2.Text = ".Length";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.radioButton1.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.radioButton1.Location = new System.Drawing.Point(97, 143);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(82, 22);
+            this.radioButton1.TabIndex = 1;
+            this.radioButton1.Text = ".Size()";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label11.Location = new System.Drawing.Point(88, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(447, 68);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Какое свойство массивов\r\nпозволяет узнать его длину?";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabPage5
+            // 
+            this.tabPage5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage5.Controls.Add(this.panel7);
+            this.tabPage5.Location = new System.Drawing.Point(4, 26);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(753, 625);
+            this.tabPage5.TabIndex = 1;
+            this.tabPage5.Text = "Вопрос 2";
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -695,9 +726,10 @@
             this.panel7.Controls.Add(this.radioButton5);
             this.panel7.Controls.Add(this.radioButton6);
             this.panel7.Controls.Add(this.label12);
-            this.panel7.Location = new System.Drawing.Point(62, 66);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(3, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(635, 525);
+            this.panel7.Size = new System.Drawing.Size(747, 525);
             this.panel7.TabIndex = 4;
             // 
             // radioButton4
@@ -762,83 +794,6 @@
             this.tabPage6.TabIndex = 2;
             this.tabPage6.Text = "Вопрос 3";
             // 
-            // tabPage7
-            // 
-            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage7.Controls.Add(this.panel9);
-            this.tabPage7.Location = new System.Drawing.Point(4, 26);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(753, 625);
-            this.tabPage7.TabIndex = 3;
-            this.tabPage7.Text = "Вопрос 4";
-            // 
-            // tabPage8
-            // 
-            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage8.Controls.Add(this.panel10);
-            this.tabPage8.Location = new System.Drawing.Point(4, 26);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage8.Size = new System.Drawing.Size(753, 625);
-            this.tabPage8.TabIndex = 4;
-            this.tabPage8.Text = "Вопрос 5";
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage9.Controls.Add(this.panel11);
-            this.tabPage9.Location = new System.Drawing.Point(4, 26);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(753, 625);
-            this.tabPage9.TabIndex = 5;
-            this.tabPage9.Text = "Вопрос 6";
-            // 
-            // tabPage10
-            // 
-            this.tabPage10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage10.Controls.Add(this.panel12);
-            this.tabPage10.Location = new System.Drawing.Point(4, 26);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(753, 625);
-            this.tabPage10.TabIndex = 6;
-            this.tabPage10.Text = "Вопрос 7";
-            // 
-            // tabPage11
-            // 
-            this.tabPage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage11.Controls.Add(this.panel13);
-            this.tabPage11.Location = new System.Drawing.Point(4, 26);
-            this.tabPage11.Name = "tabPage11";
-            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage11.Size = new System.Drawing.Size(753, 625);
-            this.tabPage11.TabIndex = 7;
-            this.tabPage11.Text = "Вопрос 8";
-            // 
-            // tabPage12
-            // 
-            this.tabPage12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage12.Controls.Add(this.panel14);
-            this.tabPage12.Location = new System.Drawing.Point(4, 26);
-            this.tabPage12.Name = "tabPage12";
-            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage12.Size = new System.Drawing.Size(753, 625);
-            this.tabPage12.TabIndex = 8;
-            this.tabPage12.Text = "Вопрос 9";
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.tabPage13.Controls.Add(this.panel15);
-            this.tabPage13.Location = new System.Drawing.Point(4, 26);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(753, 625);
-            this.tabPage13.TabIndex = 9;
-            this.tabPage13.Text = "Вопрос 10";
-            // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -846,9 +801,10 @@
             this.panel8.Controls.Add(this.radioButton8);
             this.panel8.Controls.Add(this.radioButton9);
             this.panel8.Controls.Add(this.label13);
-            this.panel8.Location = new System.Drawing.Point(51, 46);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(635, 525);
+            this.panel8.Size = new System.Drawing.Size(747, 525);
             this.panel8.TabIndex = 5;
             // 
             // radioButton7
@@ -902,6 +858,17 @@
             this.label13.Text = "Может ли индекс массива быть\r\nнецелым?";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tabPage7
+            // 
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage7.Controls.Add(this.panel9);
+            this.tabPage7.Location = new System.Drawing.Point(4, 26);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage7.Size = new System.Drawing.Size(753, 625);
+            this.tabPage7.TabIndex = 3;
+            this.tabPage7.Text = "Вопрос 4";
+            // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -909,9 +876,10 @@
             this.panel9.Controls.Add(this.radioButton11);
             this.panel9.Controls.Add(this.radioButton12);
             this.panel9.Controls.Add(this.label14);
-            this.panel9.Location = new System.Drawing.Point(63, 44);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel9.Location = new System.Drawing.Point(3, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(635, 525);
+            this.panel9.Size = new System.Drawing.Size(747, 525);
             this.panel9.TabIndex = 6;
             // 
             // radioButton10
@@ -965,6 +933,17 @@
             this.label14.Text = "Может ли элемент массива быть\r\nнецелым?";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tabPage8
+            // 
+            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage8.Controls.Add(this.panel10);
+            this.tabPage8.Location = new System.Drawing.Point(4, 26);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage8.Size = new System.Drawing.Size(753, 625);
+            this.tabPage8.TabIndex = 4;
+            this.tabPage8.Text = "Вопрос 5";
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -975,82 +954,11 @@
             this.panel10.Controls.Add(this.checkBox4);
             this.panel10.Controls.Add(this.checkBox3);
             this.panel10.Controls.Add(this.label15);
-            this.panel10.Location = new System.Drawing.Point(61, 43);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(3, 3);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(635, 525);
+            this.panel10.Size = new System.Drawing.Size(747, 525);
             this.panel10.TabIndex = 7;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label15.Location = new System.Drawing.Point(81, 36);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(463, 68);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Выберите правильно созданные\r\nодномерные массивы.";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBox3.Location = new System.Drawing.Point(37, 173);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(267, 22);
-            this.checkBox3.TabIndex = 1;
-            this.checkBox3.Text = "double[] mas = new double[12];";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBox4.Location = new System.Drawing.Point(393, 173);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(107, 22);
-            this.checkBox4.TabIndex = 2;
-            this.checkBox4.Text = "int mas[];";
-            this.checkBox4.UseVisualStyleBackColor = true;
-            // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBox5.Location = new System.Drawing.Point(37, 277);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(107, 22);
-            this.checkBox5.TabIndex = 3;
-            this.checkBox5.Text = "int[] mas;";
-            this.checkBox5.UseVisualStyleBackColor = true;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBox6.Location = new System.Drawing.Point(37, 373);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(251, 22);
-            this.checkBox6.TabIndex = 4;
-            this.checkBox6.Text = "int [,] mas = new int[5,6]; ";
-            this.checkBox6.UseVisualStyleBackColor = true;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.checkBox7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBox7.Location = new System.Drawing.Point(383, 277);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(219, 22);
-            this.checkBox7.TabIndex = 5;
-            this.checkBox7.Text = "int [] mas = new int[5];";
-            this.checkBox7.UseVisualStyleBackColor = true;
             // 
             // checkBox8
             // 
@@ -1064,61 +972,88 @@
             this.checkBox8.Text = "double[[]] = new double[][];";
             this.checkBox8.UseVisualStyleBackColor = true;
             // 
-            // tabPage14
+            // checkBox7
             // 
-            this.tabPage14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(12)))), ((int)(((byte)(76)))));
-            this.tabPage14.Controls.Add(this.label17);
-            this.tabPage14.Controls.Add(this.pictureBox7);
-            this.tabPage14.Controls.Add(this.label16);
-            this.tabPage14.Controls.Add(this.pictureBox6);
-            this.tabPage14.Location = new System.Drawing.Point(4, 27);
-            this.tabPage14.Name = "tabPage14";
-            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(763, 708);
-            this.tabPage14.TabIndex = 3;
-            this.tabPage14.Text = "Задание 4";
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox7.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.checkBox7.Location = new System.Drawing.Point(383, 277);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(219, 22);
+            this.checkBox7.TabIndex = 5;
+            this.checkBox7.Text = "int [] mas = new int[5];";
+            this.checkBox7.UseVisualStyleBackColor = true;
             // 
-            // pictureBox6
+            // checkBox6
             // 
-            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(0, 3);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(757, 342);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 0;
-            this.pictureBox6.TabStop = false;
+            this.checkBox6.AutoSize = true;
+            this.checkBox6.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox6.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.checkBox6.Location = new System.Drawing.Point(37, 373);
+            this.checkBox6.Name = "checkBox6";
+            this.checkBox6.Size = new System.Drawing.Size(251, 22);
+            this.checkBox6.TabIndex = 4;
+            this.checkBox6.Text = "int [,] mas = new int[5,6]; ";
+            this.checkBox6.UseVisualStyleBackColor = true;
             // 
-            // label16
+            // checkBox5
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label16.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label16.Location = new System.Drawing.Point(103, 368);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(575, 68);
-            this.label16.TabIndex = 1;
-            this.label16.Text = "Программа создана в\r\nсреде разработки Visual Studio 2017";
+            this.checkBox5.AutoSize = true;
+            this.checkBox5.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox5.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.checkBox5.Location = new System.Drawing.Point(37, 277);
+            this.checkBox5.Name = "checkBox5";
+            this.checkBox5.Size = new System.Drawing.Size(107, 22);
+            this.checkBox5.TabIndex = 3;
+            this.checkBox5.Text = "int[] mas;";
+            this.checkBox5.UseVisualStyleBackColor = true;
             // 
-            // pictureBox7
+            // checkBox4
             // 
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(29, 496);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(130, 117);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 2;
-            this.pictureBox7.TabStop = false;
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox4.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.checkBox4.Location = new System.Drawing.Point(393, 173);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(107, 22);
+            this.checkBox4.TabIndex = 2;
+            this.checkBox4.Text = "int mas[];";
+            this.checkBox4.UseVisualStyleBackColor = true;
             // 
-            // label17
+            // checkBox3
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label17.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label17.Location = new System.Drawing.Point(257, 534);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(431, 34);
-            this.label17.TabIndex = 3;
-            this.label17.Text = "Язык программирования - c#";
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox3.ForeColor = System.Drawing.SystemColors.AppWorkspace;
+            this.checkBox3.Location = new System.Drawing.Point(37, 173);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(267, 22);
+            this.checkBox3.TabIndex = 1;
+            this.checkBox3.Text = "double[] mas = new double[12];";
+            this.checkBox3.UseVisualStyleBackColor = true;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label15.Location = new System.Drawing.Point(81, 36);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(463, 68);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Выберите правильно созданные\r\nодномерные массивы.";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage9.Controls.Add(this.panel11);
+            this.tabPage9.Location = new System.Drawing.Point(4, 26);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(753, 625);
+            this.tabPage9.TabIndex = 5;
+            this.tabPage9.Text = "Вопрос 6";
             // 
             // panel11
             // 
@@ -1127,9 +1062,10 @@
             this.panel11.Controls.Add(this.radioButton14);
             this.panel11.Controls.Add(this.radioButton15);
             this.panel11.Controls.Add(this.label18);
-            this.panel11.Location = new System.Drawing.Point(60, 38);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(3, 3);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(635, 525);
+            this.panel11.Size = new System.Drawing.Size(747, 525);
             this.panel11.TabIndex = 7;
             // 
             // radioButton13
@@ -1184,6 +1120,17 @@
     "змерений массива?\t";
             this.label18.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tabPage10
+            // 
+            this.tabPage10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage10.Controls.Add(this.panel12);
+            this.tabPage10.Location = new System.Drawing.Point(4, 26);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(753, 625);
+            this.tabPage10.TabIndex = 6;
+            this.tabPage10.Text = "Вопрос 7";
+            // 
             // panel12
             // 
             this.panel12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -1192,9 +1139,10 @@
             this.panel12.Controls.Add(this.checkBox12);
             this.panel12.Controls.Add(this.checkBox14);
             this.panel12.Controls.Add(this.label19);
-            this.panel12.Location = new System.Drawing.Point(52, 40);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel12.Location = new System.Drawing.Point(3, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(635, 525);
+            this.panel12.Size = new System.Drawing.Size(747, 525);
             this.panel12.TabIndex = 8;
             // 
             // checkBox10
@@ -1257,6 +1205,17 @@
             this.label19.Text = "Как можно отсортировать массив?";
             this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tabPage11
+            // 
+            this.tabPage11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage11.Controls.Add(this.panel13);
+            this.tabPage11.Location = new System.Drawing.Point(4, 26);
+            this.tabPage11.Name = "tabPage11";
+            this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage11.Size = new System.Drawing.Size(753, 625);
+            this.tabPage11.TabIndex = 7;
+            this.tabPage11.Text = "Вопрос 8";
+            // 
             // panel13
             // 
             this.panel13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -1268,17 +1227,30 @@
             this.panel13.Controls.Add(this.checkBox19);
             this.panel13.Controls.Add(this.checkBox20);
             this.panel13.Controls.Add(this.label20);
-            this.panel13.Location = new System.Drawing.Point(51, 37);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(3, 3);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(635, 525);
+            this.panel13.Size = new System.Drawing.Size(747, 525);
             this.panel13.TabIndex = 9;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label23.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.label23.Location = new System.Drawing.Point(386, 62);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(298, 24);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "Что выведется в консоль?";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // checkBox15
             // 
             this.checkBox15.AutoSize = true;
             this.checkBox15.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox15.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBox15.Location = new System.Drawing.Point(411, 410);
+            this.checkBox15.Location = new System.Drawing.Point(464, 411);
             this.checkBox15.Name = "checkBox15";
             this.checkBox15.Size = new System.Drawing.Size(147, 22);
             this.checkBox15.TabIndex = 6;
@@ -1290,7 +1262,7 @@
             this.checkBox16.AutoSize = true;
             this.checkBox16.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox16.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBox16.Location = new System.Drawing.Point(411, 314);
+            this.checkBox16.Location = new System.Drawing.Point(464, 315);
             this.checkBox16.Name = "checkBox16";
             this.checkBox16.Size = new System.Drawing.Size(163, 22);
             this.checkBox16.TabIndex = 5;
@@ -1302,7 +1274,7 @@
             this.checkBox17.AutoSize = true;
             this.checkBox17.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox17.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBox17.Location = new System.Drawing.Point(55, 410);
+            this.checkBox17.Location = new System.Drawing.Point(108, 411);
             this.checkBox17.Name = "checkBox17";
             this.checkBox17.Size = new System.Drawing.Size(155, 22);
             this.checkBox17.TabIndex = 4;
@@ -1314,7 +1286,7 @@
             this.checkBox18.AutoSize = true;
             this.checkBox18.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox18.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBox18.Location = new System.Drawing.Point(55, 314);
+            this.checkBox18.Location = new System.Drawing.Point(108, 315);
             this.checkBox18.Name = "checkBox18";
             this.checkBox18.Size = new System.Drawing.Size(107, 22);
             this.checkBox18.TabIndex = 3;
@@ -1326,7 +1298,7 @@
             this.checkBox19.AutoSize = true;
             this.checkBox19.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox19.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBox19.Location = new System.Drawing.Point(421, 210);
+            this.checkBox19.Location = new System.Drawing.Point(474, 211);
             this.checkBox19.Name = "checkBox19";
             this.checkBox19.Size = new System.Drawing.Size(171, 22);
             this.checkBox19.TabIndex = 2;
@@ -1338,7 +1310,7 @@
             this.checkBox20.AutoSize = true;
             this.checkBox20.Font = new System.Drawing.Font("Consolas", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.checkBox20.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.checkBox20.Location = new System.Drawing.Point(55, 210);
+            this.checkBox20.Location = new System.Drawing.Point(108, 211);
             this.checkBox20.Name = "checkBox20";
             this.checkBox20.Size = new System.Drawing.Size(131, 22);
             this.checkBox20.TabIndex = 1;
@@ -1357,6 +1329,17 @@
             this.label20.Text = resources.GetString("label20.Text");
             this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tabPage12
+            // 
+            this.tabPage12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage12.Controls.Add(this.panel14);
+            this.tabPage12.Location = new System.Drawing.Point(4, 26);
+            this.tabPage12.Name = "tabPage12";
+            this.tabPage12.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage12.Size = new System.Drawing.Size(753, 625);
+            this.tabPage12.TabIndex = 8;
+            this.tabPage12.Text = "Вопрос 9";
+            // 
             // panel14
             // 
             this.panel14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -1364,9 +1347,10 @@
             this.panel14.Controls.Add(this.radioButton17);
             this.panel14.Controls.Add(this.radioButton18);
             this.panel14.Controls.Add(this.label21);
-            this.panel14.Location = new System.Drawing.Point(57, 41);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel14.Location = new System.Drawing.Point(3, 3);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(635, 525);
+            this.panel14.Size = new System.Drawing.Size(747, 525);
             this.panel14.TabIndex = 7;
             // 
             // radioButton16
@@ -1420,6 +1404,17 @@
             this.label21.Text = "Элементы матрицы лежащие на главной \r\nдиагонали определяются по :";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // tabPage13
+            // 
+            this.tabPage13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tabPage13.Controls.Add(this.panel15);
+            this.tabPage13.Location = new System.Drawing.Point(4, 26);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage13.Size = new System.Drawing.Size(753, 625);
+            this.tabPage13.TabIndex = 9;
+            this.tabPage13.Text = "Вопрос 10";
+            // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(52)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
@@ -1427,9 +1422,10 @@
             this.panel15.Controls.Add(this.radioButton20);
             this.panel15.Controls.Add(this.radioButton21);
             this.panel15.Controls.Add(this.label22);
-            this.panel15.Location = new System.Drawing.Point(56, 44);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel15.Location = new System.Drawing.Point(3, 3);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(635, 525);
+            this.panel15.Size = new System.Drawing.Size(747, 525);
             this.panel15.TabIndex = 8;
             // 
             // radioButton19
@@ -1483,47 +1479,61 @@
             this.label22.Text = "Выберите правильно созданный\r\nтрехмерный массив";
             this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // button3
+            // tabPage14
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.ForeColor = System.Drawing.Color.Silver;
-            this.button3.Location = new System.Drawing.Point(28, 661);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(136, 33);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Результат";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.tabPage14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(12)))), ((int)(((byte)(76)))));
+            this.tabPage14.Controls.Add(this.label17);
+            this.tabPage14.Controls.Add(this.pictureBox7);
+            this.tabPage14.Controls.Add(this.label16);
+            this.tabPage14.Controls.Add(this.pictureBox6);
+            this.tabPage14.Location = new System.Drawing.Point(4, 27);
+            this.tabPage14.Name = "tabPage14";
+            this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage14.Size = new System.Drawing.Size(763, 708);
+            this.tabPage14.TabIndex = 3;
+            this.tabPage14.Text = "Задание 4";
             // 
-            // button4
+            // label17
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(112)))), ((int)(((byte)(112)))), ((int)(((byte)(112)))));
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.ForeColor = System.Drawing.Color.Silver;
-            this.button4.Location = new System.Drawing.Point(380, 661);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(136, 33);
-            this.button4.TabIndex = 2;
-            this.button4.Text = "Пройти заново";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label17.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label17.Location = new System.Drawing.Point(257, 534);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(431, 34);
+            this.label17.TabIndex = 3;
+            this.label17.Text = "Язык программирования - c#";
             // 
-            // label23
+            // pictureBox7
             // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Consolas", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label23.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.label23.Location = new System.Drawing.Point(317, 20);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(298, 24);
-            this.label23.TabIndex = 7;
-            this.label23.Text = "Что выведется в консоль?";
-            this.label23.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(29, 496);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(130, 117);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 2;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Consolas", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label16.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label16.Location = new System.Drawing.Point(103, 368);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(575, 68);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Программа создана в\r\nсреде разработки Visual Studio 2017";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(0, 3);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(757, 342);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox6.TabIndex = 0;
+            this.pictureBox6.TabStop = false;
             // 
             // Form1
             // 
@@ -1557,39 +1567,39 @@
             this.tabPage3.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
-            this.tabPage5.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.tabPage6.ResumeLayout(false);
-            this.tabPage7.ResumeLayout(false);
-            this.tabPage8.ResumeLayout(false);
-            this.tabPage9.ResumeLayout(false);
-            this.tabPage10.ResumeLayout(false);
-            this.tabPage11.ResumeLayout(false);
-            this.tabPage12.ResumeLayout(false);
-            this.tabPage13.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            this.tabPage8.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.tabPage14.ResumeLayout(false);
-            this.tabPage14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.tabPage9.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
+            this.tabPage10.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            this.tabPage11.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
             this.panel13.PerformLayout();
+            this.tabPage12.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel14.PerformLayout();
+            this.tabPage13.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
+            this.tabPage14.ResumeLayout(false);
+            this.tabPage14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
 
         }
