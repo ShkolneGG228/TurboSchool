@@ -1,0 +1,12 @@
+C:\work\charp\WinFormApp\Control_Work\Control_Work\bin\Debug\Control_Work.exe.config
+C:\work\charp\WinFormApp\Control_Work\Control_Work\bin\Debug\Control_Work.exe
+C:\work\charp\WinFormApp\Control_Work\Control_Work\bin\Debug\Control_Work.pdb
+C:\work\charp\WinFormApp\Control_Work\Control_Work\obj\Debug\Control_Work.csprojAssemblyReference.cache
+C:\work\charp\WinFormApp\Control_Work\Control_Work\obj\Debug\Control_Work.Form1.resources
+C:\work\charp\WinFormApp\Control_Work\Control_Work\obj\Debug\Control_Work.Properties.Resources.resources
+C:\work\charp\WinFormApp\Control_Work\Control_Work\obj\Debug\Control_Work.csproj.GenerateResource.cache
+C:\work\charp\WinFormApp\Control_Work\Control_Work\obj\Debug\Control_Work.csproj.CoreCompileInputs.cache
+C:\work\charp\WinFormApp\Control_Work\Control_Work\obj\Debug\Control_Work.exe
+C:\work\charp\WinFormApp\Control_Work\Control_Work\obj\Debug\Control_Work.pdb
+C:\work\charp\WinFormApp\Control_Work\Control_Work\obj\Debug\Control_Work.UserControls.Header.resources
+C:\work\charp\WinFormApp\Control_Work\Control_Work\obj\Debug\Control_Work.Form2.resources
