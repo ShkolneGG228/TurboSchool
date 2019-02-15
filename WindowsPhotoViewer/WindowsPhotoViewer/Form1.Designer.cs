@@ -63,12 +63,17 @@
             this.HalflBtnCtx = new System.Windows.Forms.ToolStripMenuItem();
             this.NormalBtnCtx = new System.Windows.Forms.ToolStripMenuItem();
             this.DoubleBtnCtx = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -106,7 +111,7 @@
             // 
             this.SaveAsItem.Enabled = false;
             this.SaveAsItem.Name = "SaveAsItem";
-            this.SaveAsItem.Size = new System.Drawing.Size(180, 22);
+            this.SaveAsItem.Size = new System.Drawing.Size(153, 22);
             this.SaveAsItem.Text = "Сохранить как";
             this.SaveAsItem.Click += new System.EventHandler(this.SaveAsItem_Click);
             // 
@@ -297,7 +302,8 @@
             this.SizeStLab.Margin = new System.Windows.Forms.Padding(5, 3, 0, 2);
             this.SizeStLab.Name = "SizeStLab";
             this.SizeStLab.Padding = new System.Windows.Forms.Padding(0, 0, 25, 0);
-            this.SizeStLab.Size = new System.Drawing.Size(25, 17);
+            this.SizeStLab.Size = new System.Drawing.Size(55, 17);
+            this.SizeStLab.Text = "0 x 0";
             // 
             // PathStLab
             // 
@@ -305,7 +311,7 @@
             this.PathStLab.Margin = new System.Windows.Forms.Padding(50, 3, 0, 2);
             this.PathStLab.Name = "PathStLab";
             this.PathStLab.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.PathStLab.Size = new System.Drawing.Size(25, 25);
+            this.PathStLab.Size = new System.Drawing.Size(25, 17);
             // 
             // NewSize
             // 
@@ -313,7 +319,8 @@
             this.NewSize.Margin = new System.Windows.Forms.Padding(50, 3, 0, 2);
             this.NewSize.Name = "NewSize";
             this.NewSize.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.NewSize.Size = new System.Drawing.Size(25, 25);
+            this.NewSize.Size = new System.Drawing.Size(222, 17);
+            this.NewSize.Text = "Масштабированный размер : 0 x 0";
             // 
             // openFileDialog1
             // 
@@ -327,6 +334,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 59);
@@ -379,6 +387,42 @@
             this.DoubleBtnCtx.Text = "Двойной размер";
             this.DoubleBtnCtx.Click += new System.EventHandler(this.DoubleBtnCtx_Click);
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.panel2.Controls.Add(this.pictureBox2);
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.panel2.Location = new System.Drawing.Point(389, 272);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(300, 200);
+            this.panel2.TabIndex = 1;
+            this.panel2.Click += new System.EventHandler(this.panel2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(33, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(242, 22);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Загрузите изображение";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.InitialImage")));
+            this.pictureBox2.Location = new System.Drawing.Point(102, 82);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 100);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -405,6 +449,9 @@
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.contextMenuStrip1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -445,6 +492,9 @@
         private System.Windows.Forms.ToolStripMenuItem HalfButton;
         private System.Windows.Forms.ToolStripMenuItem NormalButton;
         private System.Windows.Forms.ToolStripMenuItem DoubleButton;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
     }
 }
 

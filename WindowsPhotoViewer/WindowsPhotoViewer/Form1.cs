@@ -27,6 +27,7 @@ namespace WindowsPhotoViewer
         private void Form1_Load(object sender, EventArgs e)
         {
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            panel2.Location = new Point(panel1.Width / 2 - panel2.Width/2, panel1.Height / 2 - panel2.Height/2);
         }
 
         private void OpenFile()
@@ -36,18 +37,19 @@ namespace WindowsPhotoViewer
                 return;
             }
             filename = openFileDialog1.FileName;
-            H = Image.FromFile(filename).Height;
-            W = Image.FromFile(filename).Width;
+            Hcon = Image.FromFile(filename).Height;
+            Wcon = Image.FromFile(filename).Width;
+            H = Hcon; W = Wcon;
 
             SizePic();
             pictureBox1.Image = Image.FromFile(filename);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
-            Hcon = pictureBox1.Height;
-            Wcon = pictureBox1.Width;
-            H = Hcon;W = Wcon;
+            
             SizeStLab.Text ="Исходный размер: "+ Image.FromFile(filename).Width.ToString() + " x " + Image.FromFile(filename).Height.ToString();
             PathStLab.Text = filename;
 
+            panel2.Visible = false;
+            panel2.Enabled = false;
 
             SaveAsItem.Enabled = true;
             CloseItem.Enabled = true;
@@ -100,13 +102,12 @@ namespace WindowsPhotoViewer
             }
             else { pictureBox1.Location = new Point(panel1.Width / 2 - W / 2, panel1.Height / 2 - H / 2); }
             
+
+
             NewSize.Text = pers.ToString();
             
             pictureBox1.Height = Convert.ToInt32(H * pers);
             pictureBox1.Width = Convert.ToInt32(W * pers);
-
-            /*H = pictureBox1.Height;
-            W = pictureBox1.Width;*/
 
             NewSize.Text = "Масштабированный размер : "+ pictureBox1.Width.ToString() + " x " + pictureBox1.Height.ToString();
 
@@ -179,6 +180,14 @@ namespace WindowsPhotoViewer
             Half.Enabled = false;
             Normal.Enabled = false;
             Double.Enabled = false;
+
+            panel2.Enabled = true;
+            panel2.Visible = true;
+            LocationDonImg();
+
+            SizeStLab.Text = "0 x 0";
+            PathStLab.Text = "";
+            NewSize.Text = "Масштабированный размер : 0 x 0";
         }
 
         private void toolStripButton1_Click(object sender, EventArgs e)
@@ -207,7 +216,13 @@ namespace WindowsPhotoViewer
         private void Form1_SizeChanged(object sender, EventArgs e)
         {
             NewSize.Text = Convert.ToInt32(pictureBox1.Width) + " x " + Convert.ToInt32(pictureBox1.Height);
+            LocationDonImg();
             SizePic();
+        }
+
+        private void LocationDonImg()
+        {
+            if (panel2.Enabled == true) { panel2.Location = new Point(panel1.Width / 2 - panel2.Width / 2, panel1.Height / 2 - panel2.Height / 2); }
         }
 
         private void PanelItem_Click(object sender, EventArgs e)
@@ -314,6 +329,16 @@ namespace WindowsPhotoViewer
         private void SaveAsItem_Click(object sender, EventArgs e)
         {
             SaveFile();
+        }
+
+        private void panel2_Click(object sender, EventArgs e)
+        {
+            OpenFile();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            OpenFile();
         }
 
         private void DoubleButton_Click(object sender, EventArgs e)
