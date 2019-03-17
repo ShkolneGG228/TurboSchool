@@ -18,3 +18,14 @@ C:\Users\shkolnegg\Documents\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovi
 C:\Users\shkolnegg\Documents\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.Properties.Resources.resources
 C:\Users\shkolnegg\Documents\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.Resources.resources
 C:\Users\shkolnegg\Documents\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.csproj.GenerateResource.Cache
+C:\Users\shkila\Documents\Github\TurboSchool\TurboMovingBall\TurboMovingBall\bin\Debug\TurboMovingBall.exe.config
+C:\Users\shkila\Documents\Github\TurboSchool\TurboMovingBall\TurboMovingBall\bin\Debug\TurboMovingBall.exe
+C:\Users\shkila\Documents\Github\TurboSchool\TurboMovingBall\TurboMovingBall\bin\Debug\TurboMovingBall.pdb
+C:\Users\shkila\Documents\Github\TurboSchool\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.csprojAssemblyReference.cache
+C:\Users\shkila\Documents\Github\TurboSchool\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.Form1.resources
+C:\Users\shkila\Documents\Github\TurboSchool\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.Properties.Resources.resources
+C:\Users\shkila\Documents\Github\TurboSchool\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.Resources.resources
+C:\Users\shkila\Documents\Github\TurboSchool\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.csproj.GenerateResource.cache
+C:\Users\shkila\Documents\Github\TurboSchool\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.csproj.CoreCompileInputs.cache
+C:\Users\shkila\Documents\Github\TurboSchool\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.exe
+C:\Users\shkila\Documents\Github\TurboSchool\TurboMovingBall\TurboMovingBall\obj\Debug\TurboMovingBall.pdb
