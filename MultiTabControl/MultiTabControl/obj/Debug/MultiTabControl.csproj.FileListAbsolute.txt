@@ -1,0 +1,10 @@
+C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\bin\Debug\MultiTabControl.exe.config
+C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\bin\Debug\MultiTabControl.exe
+C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\bin\Debug\MultiTabControl.pdb
+C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.csprojAssemblyReference.cache
+C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.Form1.resources
+C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.Properties.Resources.resources
+C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.csproj.GenerateResource.cache
+C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.csproj.CoreCompileInputs.cache
+C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.exe
+C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.pdb

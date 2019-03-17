@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiTabControl", "MultiTabControl\MultiTabControl.csproj", "{839FF21A-DBA3-4E36-81C7-8F0DCAC04D4E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{839FF21A-DBA3-4E36-81C7-8F0DCAC04D4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{839FF21A-DBA3-4E36-81C7-8F0DCAC04D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{839FF21A-DBA3-4E36-81C7-8F0DCAC04D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{839FF21A-DBA3-4E36-81C7-8F0DCAC04D4E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EA6D200A-140F-4594-BDB0-4BFE922B304B}
+	EndGlobalSection
+EndGlobal
