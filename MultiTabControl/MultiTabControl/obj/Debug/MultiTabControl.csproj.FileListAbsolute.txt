@@ -8,3 +8,13 @@ C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\obj\Debug\MultiTabContr
 C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.csproj.CoreCompileInputs.cache
 C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.exe
 C:\work\charp\WinFormApp\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.pdb
+C:\Users\shkila\Documents\Github\TurboSchool\MultiTabControl\MultiTabControl\bin\Debug\MultiTabControl.exe.config
+C:\Users\shkila\Documents\Github\TurboSchool\MultiTabControl\MultiTabControl\bin\Debug\MultiTabControl.exe
+C:\Users\shkila\Documents\Github\TurboSchool\MultiTabControl\MultiTabControl\bin\Debug\MultiTabControl.pdb
+C:\Users\shkila\Documents\Github\TurboSchool\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.csprojAssemblyReference.cache
+C:\Users\shkila\Documents\Github\TurboSchool\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.Form1.resources
+C:\Users\shkila\Documents\Github\TurboSchool\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.Properties.Resources.resources
+C:\Users\shkila\Documents\Github\TurboSchool\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.csproj.GenerateResource.cache
+C:\Users\shkila\Documents\Github\TurboSchool\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.csproj.CoreCompileInputs.cache
+C:\Users\shkila\Documents\Github\TurboSchool\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.exe
+C:\Users\shkila\Documents\Github\TurboSchool\MultiTabControl\MultiTabControl\obj\Debug\MultiTabControl.pdb

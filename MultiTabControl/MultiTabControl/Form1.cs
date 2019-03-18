@@ -74,15 +74,21 @@ namespace MultiTabControl
             if (radioButtons[0][1].Checked) { score++; }
             if (radioButtons[1][0].Checked) { score++; }
             if (radioButtons[2][2].Checked) { score++; }
-            DialogResult dr = MessageBox.Show("Правильных ответов: "+score+" из 3\nПройти заново?","Результат",MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk);
-            if(dr == DialogResult.Yes)
+            if (score != 3)
             {
-                for(int i = 0; i < 3; i++)
+                if (MessageBox.Show("Правильных ответов: " + score + " из 3\nПройти заново?", "Результат", MessageBoxButtons.YesNo, MessageBoxIcon.Asterisk) == DialogResult.Yes)
                 {
-                    foreach(RadioButton rd in radioButtons[i]) { rd.Checked = false; }
+                    for (int i = 0; i < 3; i++)
+                    {
+                        foreach (RadioButton rd in radioButtons[i]) { rd.Checked = false; }
+                    }
+                    tb.SelectTab(0);
+                    score = 0;
                 }
-                tb.SelectTab(0);
-                score = 0;
+            }
+            else
+            {
+                MessageBox.Show("Отлично! 100% правильных ответов");
             }
         }
 
