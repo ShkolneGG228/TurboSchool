@@ -10,10 +10,16 @@ namespace Game
         public bool OnGround = false;
         public int Direction = 0;
 
+        float time = 0;
+
+        Clock clock = new Clock();
+
+        public int lifes = 3;
+
         public static float offsetX = 0;
         public double currentFrame = 0;
 
-        static FloatRect rect = new FloatRect();
+        static FloatRect rect;
 
         static Sprite player;
 
@@ -28,6 +34,7 @@ namespace Game
 
         public void Update()
         {
+            if (time+1 < clock.ElapsedTime.AsSeconds()) { player.Color = Color.White; }
             rect.Left += dx;
             Collision(0);
             if (!OnGround) dy += 1f;
@@ -65,14 +72,23 @@ namespace Game
             for(int i =(int)rect.Top/32;i<(rect.Top+rect.Height)/32;i++)
                 for(int j = (int)rect.Left / 32; j < (rect.Left + rect.Width) / 32; j++)
                 {
-                    if (Map.tilemap[i][j] == 'B' || Map.tilemap[i][j] == '0' || Map.tilemap[i][j] == 'Q')
+                    if (Map.tilemap[i][j] == 'B' || Map.tilemap[i][j] == '0' || Map.tilemap[i][j] == 'Q' || Map.tilemap[i][j] == 'I')
                     {
                         if ((dx > 0)&&(dir==0)) { rect.Left = j * 32 - rect.Width; }
                         if ((dx < 0) && (dir == 0)) { rect.Left = j * 32 + 32; }
                         if ((dy > 0) && (dir == 1)) { rect.Top = i * 32 - rect.Height;dy = 0;OnGround = true;}
                         if ((dy < 0) && (dir == 1)) { rect.Top = i * 32+32;dy = 0; OnGround = false; }
                     }
+                    if (Map.tilemap[i][j] == 'L') { if(time+1<clock.ElapsedTime.AsSeconds())Damage(/*time*/);}
                 }
+        }
+        void Damage(/*float time*/)
+        {
+            /*if (time + 3 < clock.ElapsedTime.AsSeconds()) { lifes--; }*/
+            lifes--;
+            player.Color = Color.Red;
+            time = clock.ElapsedTime.AsSeconds();
+            Program.win.SetTitle(lifes.ToString());
         }
 
         public void Draw(RenderTarget target, RenderStates states)

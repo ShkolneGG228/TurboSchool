@@ -1,17 +1,13 @@
 ﻿using SFML.Graphics;
 using SFML.Window;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using SFML.System;
 
 namespace Game
 {
     class Program
     {
-        static RenderWindow win;
+        public static RenderWindow win;
         static Clock clock = new Clock();
         static void Main(string[] args)
         {
@@ -24,6 +20,7 @@ namespace Game
             Content.Load();
 
             Player p = new Player();
+            Enemy enemy = new Enemy();
             Map map = new Map();
             map.GenerateWorld();
             RectangleShape rect = new RectangleShape();
@@ -51,7 +48,7 @@ namespace Game
                 }
 
                 p.Update();
-
+                enemy.Update();
                 win.DispatchEvents();
 
                 win.Clear(Color.Black);
@@ -59,6 +56,8 @@ namespace Game
                 win.Draw(map);
 
                 win.Draw(p);
+                win.Draw(enemy);
+                win.Display();
 
                 FPS();
             }
@@ -75,7 +74,6 @@ namespace Game
         }
         public static void FPS()
         {
-            win.Display();
             Time time = clock.ElapsedTime;
             win.SetTitle("FPS : " + (1.0f / time.AsSeconds()).ToString());
             clock.Restart();

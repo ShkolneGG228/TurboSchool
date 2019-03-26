@@ -67,6 +67,7 @@ namespace Game
                     if (tilemap[x][y] == 'L') { rect.TextureRect = new IntRect(128, 192, 32, 32); }//lava
                     if (tilemap[x][y] == 'Q') rect.TextureRect = new IntRect(32, 64, 32, 32);//underground
                     //
+                    if (tilemap[x][y] == 'I') { rect.TextureRect = new IntRect(96, 160, 32, 32); }
                     if (tilemap[x][y] == 'E') rect.TextureRect = new IntRect(96, 32, 32, 32);
                     if (tilemap[x][y] == 'R') rect.TextureRect = new IntRect(128, 32, 32, 32);
                     if (tilemap[x][y] == 'T') rect.TextureRect = new IntRect(154, 32, 32, 32);
@@ -93,13 +94,13 @@ namespace Game
                 "0                                                 00",
                 "0                                                 00",
                 "0                                                 00",
+                "0                I I                              00",
                 "0                                                 00",
-                "0                                                 00",
-                "0                                                 00",
-                "0                                                 00",
-                "0                                                 00",
-                "0                                                 00",
-                "0                                                 00",
+                "0               I                                 00",
+                "0               I                                 00",
+                "0               I                                 00",
+                "0               I                                 00",
+                "0 I             I        I     I                  00",
                 "BBBBBBBBBBBBBBBBBBBBBBBBBBLLLLLBBBBBBBBBBBBBBBBBBBBB",
                 "QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ",
             };
