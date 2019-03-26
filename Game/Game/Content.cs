@@ -13,14 +13,14 @@ namespace Game
         public static Texture textureTiles;
         public static Texture texturePlayer;
         public static Texture textureDecor;
-        public static Texture texttureSpider;
+        public static Texture textureMario;
 
         public static void Load()
         {
             textureTiles = new Texture(CONTENT_DIR + "TileSet.png");
             texturePlayer = new Texture(CONTENT_DIR + "character.png");
             textureDecor = new Texture(CONTENT_DIR + "decor.png");
-            texttureSpider = new Texture(CONTENT_DIR + "Mario_tileset.png");
+            textureMario = new Texture(CONTENT_DIR + "Mario_tileset.png");
             Player.Load();
             Enemy.Load();
         }

@@ -20,19 +20,16 @@ namespace Game
 
         public void Draw(RenderTarget target, RenderStates states)
         {
-            /*rectangle.FillColor = Color.Green;
-            rectangle.Size = new Vector2f(32, 32);
-            target.Draw(rectangle);*/
             target.Draw(sprite);
         }
 
         public static void Load()
         {
             sprite = new Sprite();
-            sprite.Texture = new Texture(Content.texttureSpider);
+            sprite.Texture = new Texture(Content.textureMario);
             sprite.TextureRect = new IntRect(0, 0, 16*3,16*3);
             sprite.Scale = new Vector2f(3, 3);
-            rect = new FloatRect(200, 490, 16*3, 16*3);
+            rect = new FloatRect(200, 500, 16*3, 16*3);
         }
 
         public void Update()
@@ -49,17 +46,12 @@ namespace Game
             rectangle.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top);
         }
 
-        public void Death()
-        {
-
-        }
-
         void Collision()
         {
             for (int i = (int)rect.Top / 32; i < (rect.Top + rect.Height) / 32; i++)
                 for (int j = (int)rect.Left / 32; j < (rect.Left + rect.Width) / 32; j++)
                 {
-                    if (Map.tilemap[i][j] == 'B' || Map.tilemap[i][j] == '0' || Map.tilemap[i][j] == 'Q' || Map.tilemap[i][j] == 'I')
+                    if (Map.tilemap[i][j] == '0'||Map.tilemap[i][j] == 'I')
                     {
                         if(dx > 0) { rect.Left = j * 32 - rect.Width;}
                         if (dx < 0) { rect.Left = j * 32 + 32; }
