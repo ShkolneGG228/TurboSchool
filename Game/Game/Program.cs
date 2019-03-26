@@ -12,39 +12,9 @@ namespace Game
     class Program
     {
         static RenderWindow win;
+        static Clock clock = new Clock();
         static void Main(string[] args)
         {
-            const int HMap = 25;
-            const int WMap = 51;
-            string[] tilemap = new string[HMap]
-            {
-                "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
-                "B                                                 B",
-                "B                                                 B",
-                "B                                        B        B",
-                "B                                        B        B",
-                "B                                        B        B",
-                "B                                        B        B",
-                "B                                        B        B",
-                "B                                        B        B",
-                "B                                   BBBB B        B",
-                "B                                        B        B",
-                "B                                        B        B",
-                "B                                        B        B",
-                "B                                        B        B",
-                "BBBB                                     B        B",
-                "B                                        B        B",
-                "B                                        B        B",
-                "B           0000000000000000000                   B",
-                "B                                                 B",
-                "B                                                 B",
-                "B                                                 B",
-                "B                                  BB             B",
-                "B                                  BB             B",
-                "B                                  BB             B",
-                "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
-            };
-
             win = new RenderWindow(new VideoMode(800, 600), "My Game");
             win.SetVerticalSyncEnabled(true);
 
@@ -86,24 +56,11 @@ namespace Game
 
                 win.Clear(Color.Black);
 
-                /*for(int i = 0; i < HMap; i++)
-                {
-                    for(int j = 0; j < WMap; j++)
-                    {
-                        if (tilemap[i][j] == ' ') continue;
-                        if (tilemap[i][j] == 'B') rect.FillColor = Color.White;
-                        if (tilemap[i][j] == '0') rect.FillColor = Color.Green;
-                        rect.Size = new Vector2f(32, 32);
-                        rect.Position = new Vector2f(32 * j, 32 * i);
-                        
-                        win.Draw(rect);
-                    }
-                }*/
                 win.Draw(map);
 
                 win.Draw(p);
 
-                win.Display();
+                FPS();
             }
         }
 
@@ -115,6 +72,13 @@ namespace Game
         private static void Win_Closed(object sender, EventArgs e)
         {
             win.Close();
+        }
+        public static void FPS()
+        {
+            win.Display();
+            Time time = clock.ElapsedTime;
+            win.SetTitle("FPS : " + (1.0f / time.AsSeconds()).ToString());
+            clock.Restart();
         }
     }
 }
