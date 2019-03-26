@@ -10,14 +10,21 @@ namespace Game
 {
     class Enemy : Transformable, Drawable
     {
-        float dx = -5f;
-        static FloatRect rect;
+        
+        public float dx = -5f;
+        public FloatRect rect=new FloatRect(200,new Random().Next(500) , 16*3, 16*3);
         static Sprite sprite;
         float currenttime = 0;
-        bool life;
-        RectangleShape rectangle = new RectangleShape();
-        
+        public bool life = true;
 
+        public Enemy() { }
+
+        public Enemy(int x, int y)
+        {
+            rect.Left = x;
+            rect.Top = y;
+        }
+        
         public void Draw(RenderTarget target, RenderStates states)
         {
             target.Draw(sprite);
@@ -29,7 +36,6 @@ namespace Game
             sprite.Texture = new Texture(Content.textureMario);
             sprite.TextureRect = new IntRect(0, 0, 16*3,16*3);
             sprite.Scale = new Vector2f(3, 3);
-            rect = new FloatRect(200, 500, 16*3, 16*3);
         }
 
         public void Update()
@@ -41,9 +47,9 @@ namespace Game
             currenttime += 0.1f;
             if (currenttime > 2) currenttime = 0;
             sprite.TextureRect = new IntRect((int)currenttime * 18, 0, 16, 16);
+            if (!life) sprite.TextureRect = new IntRect(54, 0, 18, 16);
 
             sprite.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top);
-            rectangle.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top);
         }
 
         void Collision()

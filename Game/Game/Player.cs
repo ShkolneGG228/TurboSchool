@@ -3,6 +3,7 @@ using SFML.System;
 
 namespace Game
 {
+
     class Player : Transformable, Drawable
     {
 
@@ -19,7 +20,7 @@ namespace Game
         public static float offsetX = 0;
         public double currentFrame = 0;
 
-        static FloatRect rect;
+        public FloatRect rect = new FloatRect(100, 50, 64, 64);
 
         static Sprite player;
 
@@ -29,7 +30,6 @@ namespace Game
             player.Texture = Content.texturePlayer;
             player.TextureRect =new IntRect(0, 0, 32, 32);
             player.Scale = new Vector2f(2f, 2f);
-            rect = new FloatRect(100, 50, 64, 64);
         }
 
         public void Update()
@@ -64,7 +64,7 @@ namespace Game
 
             player.Position = new Vector2f(rect.Left - offsetX, rect.Top);
 
-            if(rect.Left>400 && rect.Left<Map.WORLD_WIDTH*24)offsetX = rect.Left - 800/2;
+            if(rect.Left>400 && rect.Left<Map.WORLD_WIDTH*28)offsetX = rect.Left - 800/2;
         }
 
         void Collision(int dir)
@@ -79,12 +79,12 @@ namespace Game
                         if ((dy > 0) && (dir == 1)) { rect.Top = i * 32 - rect.Height;dy = 0;OnGround = true;}
                         if ((dy < 0) && (dir == 1)) { rect.Top = i * 32+32;dy = 0; OnGround = false; }
                     }
-                    if (Map.tilemap[i][j] == 'L') { if(time+1<clock.ElapsedTime.AsSeconds())Damage(/*time*/);}
+                    if (Map.tilemap[i][j] == 'L' && dy>0) { if (time + 1 < clock.ElapsedTime.AsSeconds())Damage(/*time*/);}
+                    if (Map.tilemap[i][j] == 'S') { Program.score++;}
                 }
         }
-        void Damage(/*float time*/)
+        public void Damage(/*float time*/)
         {
-            /*if (time + 3 < clock.ElapsedTime.AsSeconds()) { lifes--; }*/
             lifes--;
             player.Color = Color.Red;
             time = clock.ElapsedTime.AsSeconds();

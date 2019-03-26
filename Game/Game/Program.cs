@@ -7,10 +7,15 @@ namespace Game
 {
     class Program
     {
+
         public static RenderWindow win;
         static Clock clock = new Clock();
+        public static int score;
         static void Main(string[] args)
         {
+            float time = 0;
+
+            score=0;
             win = new RenderWindow(new VideoMode(800, 600), "My Game");
             win.SetVerticalSyncEnabled(true);
 
@@ -18,16 +23,28 @@ namespace Game
             win.Resized += Win_Resized;
 
             Content.Load();
+            Font font = new Font(Content.CONTENT_DIR + "arial.ttf");
+            Text textScore = new Text("3213", font, 22);
+            textScore.Position = new Vector2f(5, 0);
+            Text textLifes = new Text("", font, 22);
+            textLifes.Position = new Vector2f(5, 32);
+            textLifes.Color = Color.Red;
 
             Player p = new Player();
-            Enemy enemy = new Enemy();
+
+            Enemy[] enemies = new Enemy[2];
+            enemies[0] = new Enemy(600, 500);
+            enemies[1] = new Enemy(32*75, 366);
+
             Map map = new Map();
             map.GenerateWorld();
             RectangleShape rect = new RectangleShape();
+            Clock clock = new Clock();
 
             
             while (win.IsOpen)
             {
+                //time = clock.ElapsedTime.AsSeconds();
                 if (Keyboard.IsKeyPressed(Keyboard.Key.Left))
                 {
                     p.dx = -5.5f;
@@ -48,15 +65,33 @@ namespace Game
                 }
 
                 p.Update();
-                enemy.Update();
                 win.DispatchEvents();
 
                 win.Clear(Color.Black);
+                //drawing
 
                 win.Draw(map);
 
                 win.Draw(p);
-                win.Draw(enemy);
+
+                for (int i = 0; i < enemies.Length; i++)
+                {
+                    enemies[i].Update();
+                    if (p.rect.Intersects(enemies[i].rect))
+                    {
+                        if (enemies[i].life)
+                        {
+                            if (p.dy > 0) { enemies[i].dx = 0; p.dy -= 24f; enemies[i].life = false; score++; }
+                            else if (time + 1 < clock.ElapsedTime.AsSeconds()) { p.Damage(); time = clock.ElapsedTime.AsSeconds(); }
+                        }
+                    }
+                    win.Draw(enemies[i]);
+                }
+
+                textScore.DisplayedString = "Количество очков: " +score.ToString();
+                textLifes.DisplayedString = "Жизни: " + p.lifes.ToString();
+                win.Draw(textScore);
+                win.Draw(textLifes);
                 win.Display();
 
                 FPS();
