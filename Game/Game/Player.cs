@@ -9,10 +9,9 @@ namespace Game
         public float dx = 0, dy = 0;
         public bool OnGround = false;
         public int Direction = 0;
-        public double currentFrame = 0;
-        static RectangleShape rectangle = new RectangleShape(new Vector2f(32*2, 32*2));
 
-        int ground = 250;
+        public static float offsetX = 0;
+        public double currentFrame = 0;
 
         static FloatRect rect = new FloatRect();
 
@@ -25,7 +24,6 @@ namespace Game
             player.TextureRect =new IntRect(0, 0, 32, 32);
             player.Scale = new Vector2f(2f, 2f);
             rect = new FloatRect(100, 50, 64, 64);
-            rectangle.FillColor = Color.Red;
         }
 
         public void Update()
@@ -38,9 +36,6 @@ namespace Game
 
             OnGround = false;
             Collision(1);
-            //if(rect.Top> ground) { rect.Top = ground; dy=0; OnGround = true; }
-
-
 
             if (currentFrame > 4) { currentFrame = 0; }
                         
@@ -60,8 +55,9 @@ namespace Game
                 }
             }
 
-            player.Position = new Vector2f(rect.Left, rect.Top);
-            rectangle.Position = new Vector2f(rect.Left, rect.Top);
+            player.Position = new Vector2f(rect.Left - offsetX, rect.Top);
+
+            if(rect.Left>400 && rect.Left<Map.WORLD_WIDTH*24)offsetX = rect.Left - 800/2;
         }
 
         void Collision(int dir)
@@ -69,7 +65,7 @@ namespace Game
             for(int i =(int)rect.Top/32;i<(rect.Top+rect.Height)/32;i++)
                 for(int j = (int)rect.Left / 32; j < (rect.Left + rect.Width) / 32; j++)
                 {
-                    if (Map.tilemap[i][j] == 'B')
+                    if (Map.tilemap[i][j] == 'B' || Map.tilemap[i][j] == '0' || Map.tilemap[i][j] == 'Q')
                     {
                         if ((dx > 0)&&(dir==0)) { rect.Left = j * 32 - rect.Width; }
                         if ((dx < 0) && (dir == 0)) { rect.Left = j * 32 + 32; }
@@ -81,7 +77,6 @@ namespace Game
 
         public void Draw(RenderTarget target, RenderStates states)
         {
-            target.Draw(rectangle);
             target.Draw(player);
         }
     }

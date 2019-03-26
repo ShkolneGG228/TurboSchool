@@ -12,11 +12,13 @@ namespace Game
         public const string CONTENT_DIR = "..\\Content\\";
         public static Texture textureTiles;
         public static Texture texturePlayer;
+        public static Texture textureDecor;
 
         public static void Load()
         {
             textureTiles = new Texture(CONTENT_DIR + "TileSet.png");
             texturePlayer = new Texture(CONTENT_DIR + "character.png");
+            textureDecor = new Texture(CONTENT_DIR + "decor.png");
             Player.Load();
         }
     }
