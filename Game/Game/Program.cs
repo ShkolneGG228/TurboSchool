@@ -32,9 +32,10 @@ namespace Game
 
             Player p = new Player();
 
-            Enemy[] enemies = new Enemy[2];
+            Enemy[] enemies = new Enemy[3];
             enemies[0] = new Enemy(600, 500);
             enemies[1] = new Enemy(32*75, 366);
+            enemies[2] = new Enemy(32 * 97, 500);
 
             Map map = new Map();
             map.GenerateWorld();
@@ -44,7 +45,6 @@ namespace Game
             
             while (win.IsOpen)
             {
-                //time = clock.ElapsedTime.AsSeconds();
                 if (Keyboard.IsKeyPressed(Keyboard.Key.Left))
                 {
                     p.dx = -5.5f;
@@ -81,7 +81,7 @@ namespace Game
                     {
                         if (enemies[i].life)
                         {
-                            if (p.dy > 0) { enemies[i].dx = 0; p.dy -= 24f; enemies[i].life = false; score++; }
+                            if (p.dy > 0) { enemies[i].dx = 0; p.dy -= 24f; enemies[i].life = false; score+=5; }
                             else if (time + 1 < clock.ElapsedTime.AsSeconds()) { p.Damage(); time = clock.ElapsedTime.AsSeconds(); }
                         }
                     }

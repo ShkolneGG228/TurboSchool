@@ -20,7 +20,7 @@ namespace Game
         public static float offsetX = 0;
         public double currentFrame = 0;
 
-        public FloatRect rect = new FloatRect(100, 50, 64, 64);
+        public FloatRect rect = new FloatRect(110, 50, 48, 48);
 
         static Sprite player;
 
@@ -29,11 +29,12 @@ namespace Game
             player = new Sprite();
             player.Texture = Content.texturePlayer;
             player.TextureRect =new IntRect(0, 0, 32, 32);
-            player.Scale = new Vector2f(2f, 2f);
+            player.Scale = new Vector2f(1.5f, 1.5f);
         }
 
         public void Update()
         {
+            if (lifes == 0) { Program.win.Close(); }
             if (time+1 < clock.ElapsedTime.AsSeconds()) { player.Color = Color.White; }
             rect.Left += dx;
             Collision(0);
@@ -80,7 +81,14 @@ namespace Game
                         if ((dy < 0) && (dir == 1)) { rect.Top = i * 32+32;dy = 0; OnGround = false; }
                     }
                     if (Map.tilemap[i][j] == 'L' && dy>0) { if (time + 1 < clock.ElapsedTime.AsSeconds())Damage(/*time*/);}
-                    if (Map.tilemap[i][j] == 'S') { Program.score++;}
+                    if (Map.tilemap[i][j] == 'S')
+                     {
+                        Program.score++;
+                        string s = Map.tilemap[i];
+                        s = s.Remove(j, 1);
+                        s=s.Insert(j," ");
+                        Map.tilemap[i] = s;
+                    }
                 }
         }
         public void Damage(/*float time*/)

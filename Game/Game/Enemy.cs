@@ -47,7 +47,7 @@ namespace Game
             currenttime += 0.1f;
             if (currenttime > 2) currenttime = 0;
             sprite.TextureRect = new IntRect((int)currenttime * 18, 0, 16, 16);
-            if (!life) sprite.TextureRect = new IntRect(54, 0, 18, 16);
+            if (!life) sprite.TextureRect = new IntRect(56, 0, 18, 16);
 
             sprite.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top);
         }
