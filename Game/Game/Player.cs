@@ -4,7 +4,7 @@ using SFML.System;
 namespace Game
 {
 
-    class Player : Transformable, Drawable
+    public class Player : Transformable, Drawable
     {
 
         public float dx = 0, dy = 0;
@@ -80,7 +80,7 @@ namespace Game
                         if ((dy > 0) && (dir == 1)) { rect.Top = i * 32 - rect.Height;dy = 0;OnGround = true;}
                         if ((dy < 0) && (dir == 1)) { rect.Top = i * 32+32;dy = 0; OnGround = false; }
                     }
-                    if (Map.tilemap[i][j] == 'L' && dy>0) { if (time + 1 < clock.ElapsedTime.AsSeconds())Damage(/*time*/);}
+                    if (Map.tilemap[i][j] == 'L' && dy>0) { if (time + 1 < clock.ElapsedTime.AsSeconds())Damage(1);}
                     if (Map.tilemap[i][j] == 'S')
                      {
                         Program.score++;
@@ -91,12 +91,15 @@ namespace Game
                     }
                 }
         }
-        public void Damage()
+        public void Damage(int damage)
         {
-            lifes--;
-            player.Color = Color.Red;
-            time = clock.ElapsedTime.AsSeconds();
-            Program.win.SetTitle(lifes.ToString());
+            if (time + 1 < clock.ElapsedTime.AsSeconds())
+            {
+                lifes -= damage;
+                player.Color = Color.Red;
+                time = clock.ElapsedTime.AsSeconds();
+                Program.win.SetTitle(lifes.ToString());
+            }
         }
 
         public void Draw(RenderTarget target, RenderStates states)

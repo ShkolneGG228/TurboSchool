@@ -55,12 +55,18 @@ namespace Game
                 }
         }
 
+        public void IntersectsWithCharacter()
+        {
+            
+        }
+
         public void Draw(RenderTarget target, RenderStates states)
         {
             RectangleShape.FillColor = Color.Red;
             target.Draw(RectangleShape);
         }
     }
+
     class Enemy : Transformable, Drawable
     {
         

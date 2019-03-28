@@ -101,6 +101,7 @@
     <Compile Include="Animation.cs" />
     <Compile Include="Content.cs" />
     <Compile Include="Enemy.cs" />
+    <Compile Include="IEnemy.cs" />
     <Compile Include="Map.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Program.cs" />

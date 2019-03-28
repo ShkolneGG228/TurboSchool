@@ -36,10 +36,10 @@ namespace Game
 
             Player p = new Player();
 
-            Enemy[] enemies = new Enemy[3];
-            enemies[0] = new Enemy(600, 500);
-            enemies[1] = new Enemy(32*75, 366);
-            enemies[2] = new Enemy(32 * 97, 500);
+            IEnemy[] enemies = new MarioEnemy[3];
+            enemies[0] = new MarioEnemy(600, 500,1f);
+            enemies[1] = new MarioEnemy(32*75, 366,5f);
+            enemies[2] = new MarioEnemy(32 * 97, 500,2f);
 
             SecondEnemy enemy = new SecondEnemy(200,300);
 
@@ -79,23 +79,24 @@ namespace Game
 
                 win.Draw(map);
 
-                win.Draw(p);
-
                 win.Draw(enemy);
 
                 for (int i = 0; i < enemies.Length; i++)
                 {
                     enemies[i].Update();
-                    if (p.rect.Intersects(enemies[i].rect))
+                    if (p.rect.Intersects(enemies[i].Rect))
                     {
-                        if (enemies[i].life)
+                        if (enemies[i].Life)
                         {
-                            if (p.dy > 0) { enemies[i].dx = 0; p.dy -= 24f; enemies[i].life = false; score+=5; }
-                            else if (time + 1 < clock.ElapsedTime.AsSeconds()) { p.Damage(); time = clock.ElapsedTime.AsSeconds(); }
+                            /*if (p.dy > 0) { enemies[i].DX = 0; p.dy -= 24f; enemies[i].Life = false; score+=5; }
+                            else if (time + 1 < clock.ElapsedTime.AsSeconds()) { p.Damage(); time = clock.ElapsedTime.AsSeconds(); }*/
+                            enemies[i].CollisionWithCharacter(p);
                         }
                     }
                     win.Draw(enemies[i]);
                 }
+
+                win.Draw(p);
 
                 textScore.DisplayedString = "Количество очков: " +score.ToString();
                 textLifes.DisplayedString = "Жизни: " + p.lifes.ToString();
@@ -116,7 +117,7 @@ namespace Game
         {
             win.Close();
         }
-        public static void FPS()
+        private static void FPS()
         {
             Time time = clock.ElapsedTime;
             win.SetTitle("FPS : " + (1.0f / time.AsSeconds()).ToString());
