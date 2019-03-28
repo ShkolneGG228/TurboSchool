@@ -14,6 +14,7 @@ namespace Game
         public static Texture texturePlayer;
         public static Texture textureDecor;
         public static Texture textureMario;
+        public static Font font;
 
         public static void Load()
         {
@@ -21,6 +22,7 @@ namespace Game
             texturePlayer = new Texture(CONTENT_DIR + "character.png");
             textureDecor = new Texture(CONTENT_DIR + "decor.png");
             textureMario = new Texture(CONTENT_DIR + "Mario_tileset.png");
+            font = new Font(CONTENT_DIR + "arial.ttf");
             Player.Load();
             Enemy.Load();
         }

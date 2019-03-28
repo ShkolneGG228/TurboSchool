@@ -5,6 +5,10 @@ using SFML.System;
 
 namespace Game
 {
+    //TODO: The parent class for enemies and other enemies
+    //      Update map and create GameOver and Restart Game
+    //      Create the class bullet and realize skying rockets
+    //      Menu maybe - would be nice
     class Program
     {
 
@@ -23,10 +27,10 @@ namespace Game
             win.Resized += Win_Resized;
 
             Content.Load();
-            Font font = new Font(Content.CONTENT_DIR + "arial.ttf");
-            Text textScore = new Text("3213", font, 22);
+
+            Text textScore = new Text("", Content.font, 22);
             textScore.Position = new Vector2f(5, 0);
-            Text textLifes = new Text("", font, 22);
+            Text textLifes = new Text("", Content.font, 22);
             textLifes.Position = new Vector2f(5, 32);
             textLifes.Color = Color.Red;
 
@@ -36,6 +40,8 @@ namespace Game
             enemies[0] = new Enemy(600, 500);
             enemies[1] = new Enemy(32*75, 366);
             enemies[2] = new Enemy(32 * 97, 500);
+
+            SecondEnemy enemy = new SecondEnemy(200,300);
 
             Map map = new Map();
             map.GenerateWorld();
@@ -65,6 +71,7 @@ namespace Game
                 }
 
                 p.Update();
+                enemy.Update();
                 win.DispatchEvents();
 
                 win.Clear(Color.Black);
@@ -73,6 +80,8 @@ namespace Game
                 win.Draw(map);
 
                 win.Draw(p);
+
+                win.Draw(enemy);
 
                 for (int i = 0; i < enemies.Length; i++)
                 {

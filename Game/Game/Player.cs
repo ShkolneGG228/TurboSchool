@@ -91,7 +91,7 @@ namespace Game
                     }
                 }
         }
-        public void Damage(/*float time*/)
+        public void Damage()
         {
             lifes--;
             player.Color = Color.Red;
