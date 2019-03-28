@@ -20,7 +20,8 @@ namespace Game
         public static float offsetX = 0;
         public double currentFrame = 0;
 
-        public FloatRect rect = new FloatRect(110, 50, 48, 48);
+        public FloatRect rect = new FloatRect(122, 50, 26, 48);
+        RectangleShape rectangle = new RectangleShape(new Vector2f(26,48));
 
         static Sprite player;
 
@@ -30,6 +31,7 @@ namespace Game
             player.Texture = Content.texturePlayer;
             player.TextureRect =new IntRect(0, 0, 32, 32);
             player.Scale = new Vector2f(1.5f, 1.5f);
+            
         }
 
         public void Update()
@@ -63,7 +65,8 @@ namespace Game
                 }
             }
 
-            player.Position = new Vector2f(rect.Left - offsetX, rect.Top);
+            player.Position = new Vector2f(rect.Left - offsetX - 12, rect.Top);
+            rectangle.Position = new Vector2f(rect.Left - offsetX + 12, rect.Top);
 
             if(rect.Left>400 && rect.Left<Map.WORLD_WIDTH*28)offsetX = rect.Left - 800/2;
         }
@@ -104,6 +107,8 @@ namespace Game
 
         public void Draw(RenderTarget target, RenderStates states)
         {
+            /*rectangle.FillColor = Color.Red;
+            target.Draw(rectangle);*/
             target.Draw(player);
         }
     }

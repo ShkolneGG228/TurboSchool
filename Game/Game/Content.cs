@@ -22,7 +22,7 @@ namespace Game
             texturePlayer = new Texture(CONTENT_DIR + "character.png");
             textureDecor = new Texture(CONTENT_DIR + "decor.png");
             textureMario = new Texture(CONTENT_DIR + "Mario_tileset.png");
-            font = new Font(CONTENT_DIR + "arial.ttf");
+            font = new Font(CONTENT_DIR + "Dpix_8pt.ttf");
             Player.Load();
             Enemy.Load();
         }

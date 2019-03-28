@@ -13,13 +13,12 @@ namespace Game
         void Update();
         void CollisionWithCharacter(Player player);
 
-        /*int x { get; set; }
-        int y { get; set; }*/
         FloatRect Rect { get; set; }
         bool Life { get; set; }
         float DX { get; set; }
         float DY { get; set; }
     }
+
     public class MarioEnemy : IEnemy
     {
         const int SCORE_FOR_KILL = 5;
@@ -34,12 +33,6 @@ namespace Game
             dx = DX;
             rect = new FloatRect(X, Y, 48, 48);
             sprite.Scale = new Vector2f(3, 3);
-        }
-        public MarioEnemy(int X,int Y,float DX, float Scale)
-        {
-            dx = DX;
-            rect = new FloatRect(X, Y, 32*Scale, 32*Scale);
-            sprite.Scale = new Vector2f(Scale, Scale);
         }
 
         public FloatRect Rect
@@ -74,6 +67,7 @@ namespace Game
             else
             {
                 player.Damage(1);
+                dx = -dx;
             }
         }
 

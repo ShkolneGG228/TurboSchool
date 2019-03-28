@@ -5,7 +5,7 @@ using SFML.System;
 
 namespace Game
 {
-    //TODO: The parent class for enemies and other enemies
+    //TODO: The parent class for enemies and other enemies - almost done
     //      Update map and create GameOver and Restart Game
     //      Create the class bullet and realize skying rockets
     //      Menu maybe - would be nice
@@ -17,8 +17,6 @@ namespace Game
         public static int score;
         static void Main(string[] args)
         {
-            float time = 0;
-
             score=0;
             win = new RenderWindow(new VideoMode(800, 600), "My Game");
             win.SetVerticalSyncEnabled(true);
@@ -37,7 +35,7 @@ namespace Game
             Player p = new Player();
 
             IEnemy[] enemies = new MarioEnemy[3];
-            enemies[0] = new MarioEnemy(600, 500,1f);
+            enemies[0] = new MarioEnemy(700, 500,1f);
             enemies[1] = new MarioEnemy(32*75, 366,5f);
             enemies[2] = new MarioEnemy(32 * 97, 500,2f);
 
