@@ -27,19 +27,20 @@ namespace Game
             Content.Load();
 
             Text textScore = new Text("", Content.font, 22);
-            textScore.Position = new Vector2f(5, 0);
+            textScore.Position = new Vector2f(5, 5);
             Text textLifes = new Text("", Content.font, 22);
-            textLifes.Position = new Vector2f(5, 32);
+            textLifes.Position = new Vector2f(5, 34);
             textLifes.Color = Color.Red;
 
             Player p = new Player();
 
-            IEnemy[] enemies = new MarioEnemy[3];
-            enemies[0] = new MarioEnemy(700, 500,1f);
+            IEnemy[] enemies = new IEnemy[4];
+            enemies[0] = new MarioEnemy(700,20*32+19,1f);
             enemies[1] = new MarioEnemy(32*75, 366,5f);
             enemies[2] = new MarioEnemy(32 * 97, 500,2f);
+            enemies[3] = new Bat(300, 400, -2f);
 
-            SecondEnemy enemy = new SecondEnemy(200,300);
+            //SecondEnemy enemy = new SecondEnemy(100,100);
 
             Map map = new Map();
             map.GenerateWorld();
@@ -69,15 +70,14 @@ namespace Game
                 }
 
                 p.Update();
-                enemy.Update();
+                //enemy.Update();
+
                 win.DispatchEvents();
 
                 win.Clear(Color.Black);
                 //drawing
 
                 win.Draw(map);
-
-                win.Draw(enemy);
 
                 for (int i = 0; i < enemies.Length; i++)
                 {
@@ -86,15 +86,14 @@ namespace Game
                     {
                         if (enemies[i].Life)
                         {
-                            /*if (p.dy > 0) { enemies[i].DX = 0; p.dy -= 24f; enemies[i].Life = false; score+=5; }
-                            else if (time + 1 < clock.ElapsedTime.AsSeconds()) { p.Damage(); time = clock.ElapsedTime.AsSeconds(); }*/
                             enemies[i].CollisionWithCharacter(p);
                         }
                     }
                     win.Draw(enemies[i]);
                 }
-
+                //win.Draw(enemy);
                 win.Draw(p);
+                
 
                 textScore.DisplayedString = "Количество очков: " +score.ToString();
                 textLifes.DisplayedString = "Жизни: " + p.lifes.ToString();

@@ -19,12 +19,119 @@ namespace Game
         float DY { get; set; }
     }
 
+    public class Bat : IEnemy
+    {
+        const int SCORE_FOR_KILL = 7;
+
+        FloatRect rect;
+        bool life = true;
+        float dx, dy;
+
+        Clock clock = new Clock();
+        float time;
+
+        Sprite sprite = new Sprite();
+        RectangleShape rectangle = new RectangleShape(new Vector2f(32,32));
+
+        public Bat(int X, int Y, float Speed)
+        {
+            dx = dy = Speed;
+            rect = new FloatRect(X, Y, 32, 32);
+        }
+
+        public FloatRect Rect
+        {
+            get { return rect; }
+            set { rect = value; }
+        }
+
+        public bool Life
+        {
+            get { return life; }
+            set { life = value; }
+        }
+
+        public float DX
+        {
+            set { dx = value; }
+            get { return dx; }
+        }
+
+        public float DY
+        {
+            set { dy = value; }
+            get { return dy; }
+        }
+
+        public void CollisionWithCharacter(Player player)
+        {
+            if(player.dy>0 && player.rect.Top < rect.Top)
+            {
+                Program.score += SCORE_FOR_KILL;
+                life = false;
+                if (dy < 0) { dy = -dy; }
+                dy *= 3f;
+                dx = 0;
+                player.dy = -10f;
+            }
+            else
+            {
+                player.Damage(1);
+            }
+        }
+
+        public void Draw(RenderTarget target, RenderStates states)
+        {
+            rectangle.FillColor = Color.Red;
+            target.Draw(rectangle);
+        }
+
+        public void Update()
+        {
+            rect.Left += dx;
+            Collision(0);
+            rect.Top += dy;
+            Collision(1);
+            rectangle.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top-Player.offsetY);
+        }
+
+        void Collision(int dir)
+        {
+            for (int i = (int)rect.Top / 32; i < (rect.Top + rect.Height) / 32; i++)
+                for (int j = (int)rect.Left / 32; j < (rect.Left + rect.Width) / 32; j++)
+                {
+                    if (Map.tilemap[i][j] == 'B' || Map.tilemap[i][j] == 'Q' || Map.tilemap[i][j] == 'I' || Map.tilemap[i][j]=='0')
+                    {
+                            if (dir == 0)
+                            {
+                                if (dx > 0) { rect.Left = j * 32 - rect.Width; }
+                                if (dx < 0) { rect.Left = j * 32 + 32; }
+                                dx = -dx;
+                            }
+                            if (dir == 1)
+                            {
+                                if (time + 200 < clock.ElapsedTime.AsMilliseconds())
+                                {
+                                    if (dy > 0) { rect.Top = i * 32 - rect.Height; }
+                                    if (dy < 0) { rect.Top = i * 32 + 32; }
+                                    if (life) { dy = -dy; } else { dy = 0; }
+                                    time = clock.ElapsedTime.AsMilliseconds();
+                                }
+                            }
+                    }
+                }
+        }
+    }
+
     public class MarioEnemy : IEnemy
     {
-        const int SCORE_FOR_KILL = 5;
+        const int SCORE_FOR_KILL = 3;
+
         float dx;
         public FloatRect rect;
         public bool life = true;
+        int direction;
+
         Sprite sprite = new Sprite(Content.textureMario);
         float currentFrame;
 
@@ -62,12 +169,15 @@ namespace Game
                 Program.score += SCORE_FOR_KILL;
                 life = false;
                 dx = 0;
-                player.dy -= 24f;
+                player.dy = -10f;
             }
             else
             {
                 player.Damage(1);
-                dx = -dx;
+                if (player.Direction != direction)
+                {
+                    dx = -dx;
+                }
             }
         }
 
@@ -79,6 +189,9 @@ namespace Game
         public void Update()
         {
             rect.Left += dx;
+
+            if (dx > 0) { direction = 1; }
+            if (dx < 0) { direction = -1; }
             Collision();
 
             currentFrame += 0.1f;
@@ -86,7 +199,7 @@ namespace Game
             sprite.TextureRect = new IntRect((int)currentFrame * 18, 0, 16, 16);
             if (!life) sprite.TextureRect = new IntRect(58, 0, 18, 16);
 
-            sprite.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top);
+            sprite.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top - Player.offsetY);
         }
 
         void Collision()

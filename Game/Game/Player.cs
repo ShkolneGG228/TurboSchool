@@ -18,9 +18,11 @@ namespace Game
         public int lifes = 3;
 
         public static float offsetX = 0;
+        public static float offsetY = 0;
+
         public double currentFrame = 0;
 
-        public FloatRect rect = new FloatRect(122, 50, 26, 48);
+        public FloatRect rect = new FloatRect(200, 200, 26, 48);
         RectangleShape rectangle = new RectangleShape(new Vector2f(26,48));
 
         static Sprite player;
@@ -65,10 +67,11 @@ namespace Game
                 }
             }
 
-            player.Position = new Vector2f(rect.Left - offsetX - 12, rect.Top);
-            rectangle.Position = new Vector2f(rect.Left - offsetX + 12, rect.Top);
+            player.Position = new Vector2f(rect.Left - offsetX - 12, rect.Top-offsetY);
+            rectangle.Position = new Vector2f(rect.Left - offsetX + 12, rect.Top-offsetY);
 
-            if(rect.Left>400 && rect.Left<Map.WORLD_WIDTH*28)offsetX = rect.Left - 800/2;
+            if(rect.Left>400 && rect.Left<Map.WORLD_WIDTH*32-800/2)offsetX = rect.Left - 800/2;
+            if (rect.Top < Map.WOLRD_HEIGHT*32-600/2) { offsetY = rect.Top - 600 / 2; }
         }
 
         void Collision(int dir)
@@ -92,6 +95,17 @@ namespace Game
                         s=s.Insert(j," ");
                         Map.tilemap[i] = s;
                     }
+                    if (Map.tilemap[i][j] == 'H')
+                    {
+                        if (lifes < 3)
+                        {
+                            lifes++;
+                        }
+                        string s = Map.tilemap[i];
+                        s = s.Remove(j, 1);
+                        s = s.Insert(j, " ");
+                        Map.tilemap[i] = s;
+                    }
                 }
         }
         public void Damage(int damage)
@@ -107,8 +121,6 @@ namespace Game
 
         public void Draw(RenderTarget target, RenderStates states)
         {
-            /*rectangle.FillColor = Color.Red;
-            target.Draw(rectangle);*/
             target.Draw(player);
         }
     }

@@ -98,7 +98,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Animation.cs" />
     <Compile Include="Content.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="IEnemy.cs" />
