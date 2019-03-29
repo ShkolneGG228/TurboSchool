@@ -32,7 +32,6 @@ namespace Game
         float currentFrame;
 
         Sprite sprite = new Sprite();
-        RectangleShape rectangle = new RectangleShape(new Vector2f(32,32));
 
         public Bat(int X, int Y, float Speed)
         {
@@ -41,7 +40,6 @@ namespace Game
             sprite.Texture = Content.MonsterEnemy;
             sprite.TextureRect = new IntRect((39+12)*0, 288, 39, 46);
             sprite.Scale = new Vector2f(2, 2);
-            rectangle.Size = new Vector2f(rect.Width, rect.Height);
         }
 
         public FloatRect Rect
@@ -80,8 +78,7 @@ namespace Game
                 player.dy = -10f;
                 sprite.TextureRect = new IntRect(103, 336, 35, 43);
                 sprite.Scale = new Vector2f(2, 1.3f);
-                rect.Height = (float)(rect.Height*0.75);
-                rectangle.Size = new Vector2f(rect.Width, rect.Height);
+                rect.Height = rect.Height*0.4f;
             }
             else
             {
@@ -90,11 +87,8 @@ namespace Game
         }
 
         public void Draw(RenderTarget target, RenderStates states)
-        {
-            rectangle.FillColor = Color.Red;
-            target.Draw(rectangle);
-            target.Draw(sprite);
-            
+        {   
+            target.Draw(sprite); 
         }
 
         public void Update()
@@ -109,7 +103,6 @@ namespace Game
             if (dx < 0) { sprite.TextureRect = new IntRect((39 + 12) * (int)currentFrame+39, 288, -39, 46); }
 
             sprite.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top-Player.offsetY);
-            rectangle.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top - Player.offsetY);
         }
 
         void Collision(int dir)
@@ -117,7 +110,7 @@ namespace Game
             for (int i = (int)rect.Top / 32; i < (rect.Top + rect.Height) / 32; i++)
                 for (int j = (int)rect.Left / 32; j < (rect.Left + rect.Width) / 32; j++)
                 {
-                    if (Map.tilemap[i][j] == 'B' || Map.tilemap[i][j] == 'Q' || Map.tilemap[i][j] == 'I' || Map.tilemap[i][j]=='0')
+                    if (Map.tilemap[i][j] == 'B' || Map.tilemap[i][j] == 'Q' || Map.tilemap[i][j] == 'I' || Map.tilemap[i][j]=='0' || Map.tilemap[i][j] == '8')
                     {
                             if (dir == 0)
                             {
@@ -224,7 +217,7 @@ namespace Game
             for (int i = (int)rect.Top / 32; i < (rect.Top + rect.Height) / 32; i++)
                 for (int j = (int)rect.Left / 32; j < (rect.Left + rect.Width) / 32; j++)
                 {
-                    if (Map.tilemap[i][j] == '0' || Map.tilemap[i][j] == 'I')
+                    if (Map.tilemap[i][j] == '0' || Map.tilemap[i][j] == 'I' || Map.tilemap[i][j] == '8' || Map.tilemap[i][j] == 'K')
                     {
                         if (dx > 0) { rect.Left = j * 32 - rect.Width; }
                         if (dx < 0) { rect.Left = j * 32 + 32; }

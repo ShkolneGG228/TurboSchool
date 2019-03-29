@@ -62,9 +62,9 @@ namespace Game
                     {
                         IntitRect(rectTree,200,15,x,y,45,95,(float)SizeOfTrees[k], target);
                         k++;
-                        //йолка
+                        //ель
                     }
-                    if (decorMap[x][y] == 'M')//ПАЛЬМА
+                    if (decorMap[x][y] == 'M')//дерево
                     {
                         IntitRect(rectTree, 460, 98, x, y, 176, 135, (float)SizeOfTrees[k], target);
                         k++;
@@ -97,6 +97,14 @@ namespace Game
                         rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - Player.offsetY);
                         target.Draw(rectdecor);
                     }
+                    if (decorMap[x][y] == 'Z')
+                    {
+                        /*rectdecor.TextureRect = new IntRect(96, 0, 111, 34);
+                        rectdecor.Size = new Vector2f(87, 34);
+                        rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - Player.offsetY);
+                        target.Draw(rectdecor);*/
+                        IntitRect(rectMarioSet, 96, 0, x, y, 108, 111, 2, target);
+                    }
 
                 }
             }
@@ -106,13 +114,15 @@ namespace Game
                 for (int y = 0; y < WORLD_WIDTH; y++)
                 {
 
-                    if (tilemap[x][y] == ' ' || tilemap[x][y] == '0') { continue; }
+                    //if (tilemap[x][y] == ' ' || tilemap[x][y] == '0' || tilemap[x][y] == 'K') { continue; }
                     if (tilemap[x][y] == 'B') rect.TextureRect = new IntRect(32, 32, 32, 32);////grass
-                    if (tilemap[x][y] == 'L') { rect.TextureRect = new IntRect(128, 192, 32, 32); }//lava
-                    if (tilemap[x][y] == 'Q') rect.TextureRect = new IntRect(32, 64, 32, 32);//underground
-                    if (tilemap[x][y] == 'I') { rect.TextureRect = new IntRect(96, 160, 32, 32); }
-                    if (tilemap[x][y] == 'S') { rect.TextureRect = new IntRect(160 + 5, 192 + 5, 20, 20);/*rect.Scale = new Vector2f(-1.3f, -1.3f);*/ }
-                    if (tilemap[x][y] == 'H') { rect.TextureRect = new IntRect(160, 160, 16, 16); }
+                    else if (tilemap[x][y] == 'L') { rect.TextureRect = new IntRect(128, 192, 32, 32); }//lava
+                    else if (tilemap[x][y] == 'Q') rect.TextureRect = new IntRect(32, 64, 32, 32);//underground
+                    else if (tilemap[x][y] == 'I') { rect.TextureRect = new IntRect(96, 160, 32, 32); }
+                    else if (tilemap[x][y] == 'S') { rect.TextureRect = new IntRect(160 + 5, 192 + 5, 20, 20);}
+                    else if (tilemap[x][y] == 'H') { rect.TextureRect = new IntRect(160, 160, 16, 16); }
+                    else if (tilemap[x][y] == '8') { rect.TextureRect = new IntRect(192, 224, 32, 32); }
+                    else { continue; }
                     rect.Size = new Vector2f(32, 32);
                     rect.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - Player.offsetY);
                     target.Draw(rect);
@@ -141,27 +151,27 @@ namespace Game
             {
                 "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
                 "0                                                                                                                                                                                                         0",
-                "0                                                                                                                                                                                                         0",
-                "0                                                                                                                                                                                                         0",
-                "0                                                                                                                                                                                                         0",
-                "0                                                                                                                                                                                                         0",
-                "0                                                                                                                                                                                                         0",
-                "0                                                                                                                                                                                                         0",
-                "0                                                     IIII     H                                           IIIIIIII    I     I                                                                            0",
-                "0                                 H                         IIIIIII                                       I           IIIIIIIII                                                                           0",
-                "0                                 I     SSS                       I                                       I            I     I                                                                            0",
-                "0                                       IIII       I              I                                       I            I  S  I                                                                            0",
-                "0                                                                 IIIIIIIII                               I            I     I                                                                            0",
-                "0                        S                                         IS               H                     I           IIIIIIIII                                                                           0",
-                "0                                                                  IS               I                      IIIIIIII    I     I                                                                            0",
-                "0                                                                  I              III                                                                                                                     0",
-                "0                        S                      II       S         I         I   IISS                                                                                                                     0",
-                "0                        I                            IIII         ISSS      ILLIIISS                                                                                                                     0",
-                "0                 I      I                                         IIIIIIIIIIIIIIIISS                                                                                                                     0",
-                "0                 I      I                                                        ISS                                                                                                                     0",
-                "0                 I      I                                                        III                               SS                                                                                    0",
-                "0                 I      I     I                   SI                                  I            I            SSS  SSS                                                                                 0",
-                "BBBBBBBBBBBBBBBBBBBBBBBBBBLLLLLBBBBBBBBBBBBBBBBBBBBBBLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+                "0                                                                                                                                                                            I                            0",
+                "0                                                                                                                                                                            I                            0",
+                "0                                                                                                                                                                            I                            0",
+                "0                                                                                                                                                                            I                            0",
+                "0                                                                                                                                                        H                   I                            0",
+                "0                                                                                                                                                        I  IIIIIIIIIIIIIIIIIII                           0",
+                "0                                                     IIII     H                                           IIIIIIII    I     I                          II                    I                           0",
+                "0                                 H                         IIIIIII                                       I           IIIIIIIII                        I I                    I                           0",
+                "0                                 I     SSS                       I                                       I            I     I                        I  I                    I                           0",
+                "0                                       IIII       I              I                                       I            I  S  I                       I   I                    I                           0",
+                "0                                                                 IIIIIIIII                               I            I     I                      I    I                    I                           0",
+                "0                        S                                         IS               H                     I           IIIIIIIII                    I     I                    I                           0",
+                "0                                                                  IS               I                      IIIIIIII    I     I                    I      I                    I                           0",
+                "0                                                                  I              III                                                            I       I                    I                           0",
+                "0                        S                      II       S         I         I   IISS                                                           I        I                    I                           0",
+                "0                        I                            IIII         ISSS      ILLIIISS                                                          I         I                    I                           0",
+                "0                 I      I                                         IIIIIIIIIIIIIIIISS                                                         I          I                    I                           0",
+                "0                 I      I                                                        ISS                                                        I           I                    I                           0",
+                "0                 I      I                                                        III                               SS                      I            I                    8                   Z       0",
+                "0                 I      I     I                   SI                                  I            I            SSS  SSS                  I             I          K         8                   Z       0",
+                "BBBBBBBBBBBBBBBBBBBBBBBBBBLLLLLBBBBBBBBBBBBBBBBBBBBBBLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBLBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
                 "QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ",
             };
             decorMap = new string[WOLRD_HEIGHT]
@@ -187,7 +197,7 @@ namespace Game
                 "                                                                                                                                                                                                          ",
                 "                                                                                                                                                                                                          ",
                 "                                                                                                                                                                                                          ",
-                "UG T H TTTT UT   M M              H   PTTMGTT FH                                       TTTTTTTTTTTGTTTGTTTTGTTTTGTTTGTTTTTTUHFHHUFTUTHTUHTFHGTMTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+                "UG T H TTTT UT   M M              H   PTTMGTT FH                                       TTTTTTTTTTTGTTTGTTTTGTTTTGTTTGTTTTTTUHFHHUFTUTHTUHTFHGTMTTTTTTTTTTTTTTTTTTTTT TTTTTTTTTTTTTTTHGHMHHHTTTTTTTTZTTTTTT",
                 "                                                                                                                                                                                                          ",
                 "                                                                                                                                                                                                          ",
             };

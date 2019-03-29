@@ -5,10 +5,6 @@ using SFML.System;
 
 namespace Game
 {
-    //TODO: The parent class for enemies and other enemies - almost done
-    //      Update map and create GameOver and Restart Game
-    //      Create the class bullet and realize skying rockets
-    //      Menu maybe - would be nice
     class Program
     {
 
@@ -34,18 +30,22 @@ namespace Game
 
             Player p = new Player();
 
-            IEnemy[] enemies = new IEnemy[4];
+            IEnemy[] enemies = new IEnemy[8];
             enemies[0] = new MarioEnemy(700,20*32+19,1f);
             enemies[1] = new MarioEnemy(32*75, 32*16+16,5f);
             enemies[2] = new MarioEnemy(32 * 97, 20*32+19,2f);
-            enemies[3] = new Bat(300, 400, 2f);
+            enemies[3] = new Bat(900, 400, 8f);
+            enemies[4] = new Bat(32 * 160, 500, 3f);
+            enemies[5] = new Bat(32 * 155, 300, -3f);
+            enemies[6] = new MarioEnemy(32 * 155, 20*32+19, 2f);
+            enemies[7] = new MarioEnemy(32 * 164, 20*32+19, -2f);
 
             Map map = new Map();
             map.GenerateWorld();
             RectangleShape rect = new RectangleShape();
             Clock clock = new Clock();
 
-            
+            int k = 0;
             while (win.IsOpen)
             {
                 if (Keyboard.IsKeyPressed(Keyboard.Key.Left))
@@ -68,6 +68,30 @@ namespace Game
                 }
 
                 p.Update();
+
+                if (p.rect.Left > 155 * 32 && p.rect.Top > 8 * 32)
+                {
+                    string s = Map.tilemap[7];
+                    s = s.Remove(154, 2);
+                    s = s.Insert(154, "88");
+                   // k++;
+                    Map.tilemap[7] = s;
+                }
+
+                if (k == 0 && !enemies[4].Life && !enemies[5].Life && !enemies[6].Life && !enemies[7].Life)
+                {
+                    string s = Map.tilemap[20];
+                    s = s.Remove(174, 1);
+                    s = s.Insert(174, " ");
+                    Map.tilemap[20] = s;
+                    s = Map.tilemap[21];
+                    s = s.Remove(154, 21);
+                    s = s.Insert(154, "SSSSSSSSSSSSSSSSSSSS ");
+                    Map.tilemap[21] = s;
+                    k++;
+                }
+                
+
 
                 win.DispatchEvents();
 

@@ -22,7 +22,7 @@ namespace Game
 
         public double currentFrame = 0;
 
-        public FloatRect rect = new FloatRect(200, 200, 26, 48);
+        public FloatRect rect = new FloatRect(64, 300, 26, 48);
         RectangleShape rectangle = new RectangleShape(new Vector2f(26,48));
 
         static Sprite player;
@@ -79,7 +79,7 @@ namespace Game
             for(int i =(int)rect.Top/32;i<(rect.Top+rect.Height)/32;i++)
                 for(int j = (int)rect.Left / 32; j < (rect.Left + rect.Width) / 32; j++)
                 {
-                    if (Map.tilemap[i][j] == 'B' || Map.tilemap[i][j] == '0' || Map.tilemap[i][j] == 'Q' || Map.tilemap[i][j] == 'I')
+                    if (Map.tilemap[i][j] == 'B' || Map.tilemap[i][j] == '0' || Map.tilemap[i][j] == 'Q' || Map.tilemap[i][j] == 'I' || Map.tilemap[i][j] == '8')
                     {
                         if ((dx > 0)&&(dir==0)) { rect.Left = j * 32 - rect.Width; }
                         if ((dx < 0) && (dir == 0)) { rect.Left = j * 32 + 32; }
@@ -89,11 +89,11 @@ namespace Game
                     if (Map.tilemap[i][j] == 'L' && dy>0) { if (time + 1 < clock.ElapsedTime.AsSeconds())Damage(1);}
                     if (Map.tilemap[i][j] == 'S')
                      {
-                        Program.score++;
                         string s = Map.tilemap[i];
                         s = s.Remove(j, 1);
-                        s=s.Insert(j," ");
+                        s = s.Insert(j," ");
                         Map.tilemap[i] = s;
+                        Program.score++;
                     }
                     if (Map.tilemap[i][j] == 'H')
                     {
