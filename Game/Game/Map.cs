@@ -11,12 +11,19 @@ namespace Game
     class Map : Transformable, Drawable
     {
         public const int WOLRD_HEIGHT = 24;
-        public const int WORLD_WIDTH = 102;
+        public const int WORLD_WIDTH = 202;
         RectangleShape rect = new RectangleShape();
         RectangleShape rectdecor = new RectangleShape(new Vector2f(74,53));
+        RectangleShape rectTree = new RectangleShape();
         RectangleShape rectMarioSet = new RectangleShape();
         public static string[] tilemap;
         public static string[] decorMap;
+        Random rnd = new Random();
+
+        List<double> SizeOfTrees = new List<double>()
+        {
+            1.2,2.3,3.1,2.3,4.0,1.4,1.9,2.5,3.7,1.1,2.2,3.1,4.1,2.8,4.1,2.3,1.24,2.5,1.3,2.1,3.8,4,1,2.2
+        };
 
         public void Draw(RenderTarget target, RenderStates states)
         {
@@ -32,7 +39,7 @@ namespace Game
                     target.Draw(rect);
                 }
             }
-
+            int k = 0;
             for (int x = 0; x < WOLRD_HEIGHT; x++)
             {
                 for (int y = 0; y < WORLD_WIDTH; y++)
@@ -47,24 +54,20 @@ namespace Game
 
                     if (decorMap[x][y] == 'U')
                     {
-                        rectdecor.TextureRect = new IntRect(0, 0, 119, 86);
-                        rectdecor.Size = new Vector2f(119, 86);
-                        rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - 55 - Player.offsetY);
-                        target.Draw(rectdecor);
+                        IntitRect(rectTree,0,100,x,y,63,141,(float)SizeOfTrees[k], target);
+                        k++;
+                        //дерево
                     }
                     if (decorMap[x][y] == 'F')
                     {
-                        rectdecor.TextureRect = new IntRect(0, 94, 104, 116);
-                        rectdecor.Size = new Vector2f(104, 116);
-                        rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - 80 - Player.offsetY);
-                        target.Draw(rectdecor);
+                        IntitRect(rectTree,200,15,x,y,45,95,(float)SizeOfTrees[k], target);
+                        k++;
+                        //йолка
                     }
-                    if (decorMap[x][y] == 'M')
+                    if (decorMap[x][y] == 'M')//ПАЛЬМА
                     {
-                        rectdecor.TextureRect = new IntRect(240, 367, 86, 207);
-                        rectdecor.Size = new Vector2f(86, 207);
-                        rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - 150 - Player.offsetY);
-                        target.Draw(rectdecor);
+                        IntitRect(rectTree, 460, 98, x, y, 176, 135, (float)SizeOfTrees[k], target);
+                        k++;
                     }
                     if (decorMap[x][y] == 'O')
                     {
@@ -78,6 +81,20 @@ namespace Game
                         rectdecor.TextureRect = new IntRect(0, 325, 91, 117);
                         rectdecor.Size = new Vector2f(91, 117);
                         rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - 117/2-Player.offsetY);
+                        target.Draw(rectdecor);
+                    }
+                    if (decorMap[x][y] == '1')
+                    {
+                        rectdecor.TextureRect = new IntRect(84, 609, 44, 34);
+                        rectdecor.Size = new Vector2f(44, 34);
+                        rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - Player.offsetY);
+                        target.Draw(rectdecor);
+                    }
+                    if (decorMap[x][y] == '2')
+                    {
+                        rectdecor.TextureRect = new IntRect(0, 654, 87, 34);
+                        rectdecor.Size = new Vector2f(87, 34);
+                        rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - Player.offsetY);
                         target.Draw(rectdecor);
                     }
 
@@ -105,64 +122,74 @@ namespace Game
 
         }
 
+        public void IntitRect(RectangleShape rect, int left, int top, int x,int y, int width, int height, float scale, RenderTarget target)
+        {
+            rect.TextureRect = new IntRect(left, top, width, height);
+            rect.Size = new Vector2f(width, height);
+            rect.Position = new Vector2f(32 * y -Player.offsetX, 32 * x - (int)(height*0.9*scale-x) - Player.offsetY);
+            rect.Scale = new Vector2f(scale, scale);
+            target.Draw(rect);
+        }
+
         public void GenerateWorld()
         {
             rect.Texture = Content.textureTiles;
             rectdecor.Texture = Content.textureDecor;
             rectMarioSet.Texture = Content.textureMario;
+            rectTree.Texture = Content.textureTrees;
              tilemap = new string[WOLRD_HEIGHT]
             {
-                "000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
-                "0                                                                                                    0",
-                "0                                                                                                    0",
-                "0                                                                                                    0",
-                "0                                                                                                    0",
-                "0                                                                                                    0",
-                "0                                                                                                    0",
-                "0                                                                                                    0",
-                "0                                        S           IIIII     H                                     0",
-                "0                                 H                         IIIIIII                                  0",
-                "0                                 I     SSS                       I                                  0",
-                "0                                       IIII       I              I                                  0",
-                "0                                                                  IIIIIIII                          0",
-                "0                        S                                         IS               H                0",
-                "0                                                                  IS               I                0",
-                "0 IIIIIIIIIIIIIIIII                                                I              III                0",
-                "0                 I      S                      II       S         I         I   IISS                0",
-                "0                 I      I                            IIII         ISSS      ILLIIISS                0",
-                "0                 I      I                                         IIIIIIIIIIIIIIIISS                0",
-                "0                 I      I                                                        ISS                0",
-                "0                 I      I                                                        III                0",
-                "0                 I      I     I                   SI                                  I            I0",
-                "BBBBBBBBBBBBBBBBBBBBBBBBBBLLLLLBBBBBBBBBBBBBBBBBBBBBBLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLBBBBBBBBBBBBBBB",
-                "QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ",
+                "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+                "0                                                                                                                                                                                                         0",
+                "0                                                                                                                                                                                                         0",
+                "0                                                                                                                                                                                                         0",
+                "0                                                                                                                                                                                                         0",
+                "0                                                                                                                                                                                                         0",
+                "0                                                                                                                                                                                                         0",
+                "0                                                                                                                                                                                                         0",
+                "0                                                     IIII     H                                           IIIIIIII    I     I                                                                            0",
+                "0                                 H                         IIIIIII                                       I           IIIIIIIII                                                                           0",
+                "0                                 I     SSS                       I                                       I            I     I                                                                            0",
+                "0                                       IIII       I              I                                       I            I  S  I                                                                            0",
+                "0                                                                 IIIIIIIII                               I            I     I                                                                            0",
+                "0                        S                                         IS               H                     I           IIIIIIIII                                                                           0",
+                "0                                                                  IS               I                      IIIIIIII    I     I                                                                            0",
+                "0                                                                  I              III                                                                                                                     0",
+                "0                        S                      II       S         I         I   IISS                                                                                                                     0",
+                "0                        I                            IIII         ISSS      ILLIIISS                                                                                                                     0",
+                "0                 I      I                                         IIIIIIIIIIIIIIIISS                                                                                                                     0",
+                "0                 I      I                                                        ISS                                                                                                                     0",
+                "0                 I      I                                                        III                               SS                                                                                    0",
+                "0                 I      I     I                   SI                                  I            I            SSS  SSS                                                                                 0",
+                "BBBBBBBBBBBBBBBBBBBBBBBBBBLLLLLBBBBBBBBBBBBBBBBBBBBBBLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB",
+                "QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ",
             };
             decorMap = new string[WOLRD_HEIGHT]
             {
-                "                                                                                       O              ",
-                "                                                                                                      ",
-                "                                                                                                      ",
-                "                                                                                                      ",
-                "                                                                                                      ",
-                "                                                                                                      ",
-                "                         O                                                                            ",
-                "           O                                         O                     O          O               ",
-                "                                      O                              O                         O      ",
-                "             O                                                                                        ",
-                "                       O           O                                                                  ",
-                "    O                                                                                                 ",
-                "                                            O            O                                    O       ",
-                "            O                                                                                         ",
-                "                                  O                                                                   ",
-                "                                                                                                      ",
-                "                                                                                                      ",
-                "                                                                                              O       ",
-                "                                                                                                      ",
-                "                                                                                                      ",
-                "                                                                                                      ",
-                "TG TT H TTTT UT H   M              H   PTTTGTT FH                                       TTUTTTH MTG TT",
-                "                                                                                                      ",
-                "                                                                                                      ",
+                "                                               O                                       O                                                            O            2         1             O                ",
+                "         2                                                               1                            1               O                  2                                                         2      ",
+                "                                      O                O                                                                                                                            O                     ",
+                "                 O                                                                                                                                                                         O              ",
+                "                                              2                    O                        O                                    1               1                                                        ",
+                "                                                                                                          2            1                                                           2                      ",
+                "                         1                                                                                                                                                                        1       ",
+                "                                                     O                     1          2                                                 O                    2           2                                ",
+                "                                       2                                                        O                                                    O                                    1               ",
+                "             2                                                                                                  O                                                                                2        ",
+                "                       O           1                                                                                                                                                                      ",
+                "    O                                                                                                                             O                             O                 O                       ",
+                "                                            O            2                  O                 1                 1                                2                                                        ",
+                "            1                                                                                                                                                                                 2           ",
+                "                                  O                                                                                                                                          O                            ",
+                "                                                                                                                                                                                                          ",
+                "                                                                                                                                                                                                          ",
+                "                                                                                              O                                                                                                           ",
+                "                                                                                                                                                                                                          ",
+                "                                                                                                                                                                                                          ",
+                "                                                                                                                                                                                                          ",
+                "UG T H TTTT UT   M M              H   PTTMGTT FH                                       TTTTTTTTTTTGTTTGTTTTGTTTTGTTTGTTTTTTUHFHHUFTUTHTUHTFHGTMTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT",
+                "                                                                                                                                                                                                          ",
+                "                                                                                                                                                                                                          ",
             };
             
             

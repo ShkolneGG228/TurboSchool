@@ -68,10 +68,10 @@ namespace Game
             }
 
             player.Position = new Vector2f(rect.Left - offsetX - 12, rect.Top-offsetY);
-            rectangle.Position = new Vector2f(rect.Left - offsetX + 12, rect.Top-offsetY);
-
+            rectangle.Position = new Vector2f(rect.Left - offsetX + 12, rect.Top-offsetY);{ 
+}
             if(rect.Left>400 && rect.Left<Map.WORLD_WIDTH*32-800/2)offsetX = rect.Left - 800/2;
-            if (rect.Top < Map.WOLRD_HEIGHT*32-600/2) { offsetY = rect.Top - 600 / 2; }
+            if (rect.Top < Map.WOLRD_HEIGHT*32-600/2 && rect.Top>32*10) { offsetY = rect.Top - 600 / 2; }
         }
 
         void Collision(int dir)
@@ -100,11 +100,11 @@ namespace Game
                         if (lifes < 3)
                         {
                             lifes++;
-                        }
-                        string s = Map.tilemap[i];
-                        s = s.Remove(j, 1);
-                        s = s.Insert(j, " ");
-                        Map.tilemap[i] = s;
+                            string s = Map.tilemap[i];
+                            s = s.Remove(j, 1);
+                            s = s.Insert(j, " ");
+                            Map.tilemap[i] = s;
+                        }   
                     }
                 }
         }

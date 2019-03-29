@@ -29,6 +29,7 @@ namespace Game
 
         Clock clock = new Clock();
         float time;
+        float currentFrame;
 
         Sprite sprite = new Sprite();
         RectangleShape rectangle = new RectangleShape(new Vector2f(32,32));
@@ -36,7 +37,11 @@ namespace Game
         public Bat(int X, int Y, float Speed)
         {
             dx = dy = Speed;
-            rect = new FloatRect(X, Y, 32, 32);
+            rect = new FloatRect(X, Y, 39*2, 46*2);
+            sprite.Texture = Content.MonsterEnemy;
+            sprite.TextureRect = new IntRect((39+12)*0, 288, 39, 46);
+            sprite.Scale = new Vector2f(2, 2);
+            rectangle.Size = new Vector2f(rect.Width, rect.Height);
         }
 
         public FloatRect Rect
@@ -73,6 +78,10 @@ namespace Game
                 dy *= 3f;
                 dx = 0;
                 player.dy = -10f;
+                sprite.TextureRect = new IntRect(103, 336, 35, 43);
+                sprite.Scale = new Vector2f(2, 1.3f);
+                rect.Height = (float)(rect.Height*0.75);
+                rectangle.Size = new Vector2f(rect.Width, rect.Height);
             }
             else
             {
@@ -84,6 +93,8 @@ namespace Game
         {
             rectangle.FillColor = Color.Red;
             target.Draw(rectangle);
+            target.Draw(sprite);
+            
         }
 
         public void Update()
@@ -92,7 +103,13 @@ namespace Game
             Collision(0);
             rect.Top += dy;
             Collision(1);
-            rectangle.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top-Player.offsetY);
+            currentFrame += 0.2f;
+            if (currentFrame > 3f) currentFrame = 0;
+            if (dx > 0) { sprite.TextureRect = new IntRect((39 + 12) * (int)currentFrame, 288, 39, 46); }
+            if (dx < 0) { sprite.TextureRect = new IntRect((39 + 12) * (int)currentFrame+39, 288, -39, 46); }
+
+            sprite.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top-Player.offsetY);
+            rectangle.Position = new Vector2f(rect.Left - Player.offsetX, rect.Top - Player.offsetY);
         }
 
         void Collision(int dir)

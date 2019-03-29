@@ -36,11 +36,9 @@ namespace Game
 
             IEnemy[] enemies = new IEnemy[4];
             enemies[0] = new MarioEnemy(700,20*32+19,1f);
-            enemies[1] = new MarioEnemy(32*75, 366,5f);
-            enemies[2] = new MarioEnemy(32 * 97, 500,2f);
-            enemies[3] = new Bat(300, 400, -2f);
-
-            //SecondEnemy enemy = new SecondEnemy(100,100);
+            enemies[1] = new MarioEnemy(32*75, 32*16+16,5f);
+            enemies[2] = new MarioEnemy(32 * 97, 20*32+19,2f);
+            enemies[3] = new Bat(300, 400, 2f);
 
             Map map = new Map();
             map.GenerateWorld();
@@ -70,12 +68,10 @@ namespace Game
                 }
 
                 p.Update();
-                //enemy.Update();
 
                 win.DispatchEvents();
 
                 win.Clear(Color.Black);
-                //drawing
 
                 win.Draw(map);
 
@@ -91,7 +87,6 @@ namespace Game
                     }
                     win.Draw(enemies[i]);
                 }
-                //win.Draw(enemy);
                 win.Draw(p);
                 
 
