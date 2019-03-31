@@ -6,6 +6,7 @@ namespace Game
 
     public class Player : Transformable, Drawable
     {
+        const int MAX_LIFES = 15;
 
         public float dx = 0, dy = 0;
         public bool OnGround = false;
@@ -15,7 +16,7 @@ namespace Game
 
         Clock clock = new Clock();
 
-        public int lifes = 3;
+        public int lifes = MAX_LIFES;
 
         public static float offsetX = 0;
         public static float offsetY = 0;
@@ -97,7 +98,7 @@ namespace Game
                     }
                     if (Map.tilemap[i][j] == 'H')
                     {
-                        if (lifes < 3)
+                        if (lifes < MAX_LIFES)
                         {
                             lifes++;
                             string s = Map.tilemap[i];

@@ -16,9 +16,9 @@ namespace Game
             score=0;
             win = new RenderWindow(new VideoMode(800, 600), "My Game");
             win.SetVerticalSyncEnabled(true);
-
             win.Closed += Win_Closed;
             win.Resized += Win_Resized;
+            win.Size = new Vector2u(800, 600);
 
             Content.Load();
 
@@ -30,15 +30,15 @@ namespace Game
 
             Player p = new Player();
 
-            IEnemy[] enemies = new IEnemy[8];
-            enemies[0] = new MarioEnemy(700,20*32+19,1f);
-            enemies[1] = new MarioEnemy(32*75, 32*16+16,5f);
-            enemies[2] = new MarioEnemy(32 * 97, 20*32+19,2f);
-            enemies[3] = new Bat(900, 400, 8f);
-            enemies[4] = new Bat(32 * 160, 500, 3f);
-            enemies[5] = new Bat(32 * 155, 300, -3f);
-            enemies[6] = new MarioEnemy(32 * 155, 20*32+19, 2f);
-            enemies[7] = new MarioEnemy(32 * 164, 20*32+19, -2f);
+            Enemy[] enemies = new Enemy[8];
+            enemies[0] = new EnemyMario(700,20*32+19,1f);
+            enemies[1] = new EnemyMario(32*75, 32*16+16,5f);
+            enemies[2] = new EnemyMario(32 * 97, 20*32+19,2f);
+            enemies[3] = new Bat(900, 400, 5f, 5f);
+            enemies[4] = new Bat(32 * 160, 500, 3f, 3f);
+            enemies[5] = new Bat(32 * 155, 300, -3f, 3f);
+            enemies[6] = new EnemyMario(32 * 155, 20*32+19, 2f);
+            enemies[7] = new EnemyMario(32 * 169, 20*32+19, -2f);
 
             Map map = new Map();
             map.GenerateWorld();
@@ -102,7 +102,7 @@ namespace Game
                 for (int i = 0; i < enemies.Length; i++)
                 {
                     enemies[i].Update();
-                    if (p.rect.Intersects(enemies[i].Rect))
+                    if (p.rect.Intersects(enemies[i].rect))
                     {
                         if (enemies[i].Life)
                         {
@@ -112,7 +112,6 @@ namespace Game
                     win.Draw(enemies[i]);
                 }
                 win.Draw(p);
-                
 
                 textScore.DisplayedString = "Количество очков: " +score.ToString();
                 textLifes.DisplayedString = "Жизни: " + p.lifes.ToString();
@@ -126,7 +125,8 @@ namespace Game
 
         private static void Win_Resized(object sender, SizeEventArgs e)
         {
-            win.SetView(new View(new FloatRect(0, 0, e.Width, e.Height)));
+            //win.SetView(new View(new FloatRect(0, 0, e.Width, e.Height)));
+            win.Size = new Vector2u(800, 600);
         }
 
         private static void Win_Closed(object sender, EventArgs e)
