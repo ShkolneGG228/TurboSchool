@@ -80,6 +80,7 @@ namespace Game
             for(int i =(int)rect.Top/32;i<(rect.Top+rect.Height)/32;i++)
                 for(int j = (int)rect.Left / 32; j < (rect.Left + rect.Width) / 32; j++)
                 {
+                    if (Map.tilemap[i][j] == 'Z') { Program.Win(); }
                     if (Map.tilemap[i][j] == 'B' || Map.tilemap[i][j] == '0' || Map.tilemap[i][j] == 'Q' || Map.tilemap[i][j] == 'I' || Map.tilemap[i][j] == '8')
                     {
                         if ((dx > 0)&&(dir==0)) { rect.Left = j * 32 - rect.Width; }
