@@ -2,15 +2,16 @@
 using SFML.Window;
 using System;
 using SFML.System;
+using System.Windows.Forms;
 
 namespace Game
 {
     class Program
     {
-
         public static RenderWindow win;
         static Clock clock = new Clock();
         public static int score;
+        public static bool IsWin = false;
         static void Main(string[] args)
         {
             score=0;
@@ -42,7 +43,6 @@ namespace Game
 
             Map map = new Map();
             map.GenerateWorld();
-            RectangleShape rect = new RectangleShape();
             Clock clock = new Clock();
 
             int k = 0;
@@ -74,7 +74,6 @@ namespace Game
                     string s = Map.tilemap[7];
                     s = s.Remove(154, 2);
                     s = s.Insert(154, "88");
-                   // k++;
                     Map.tilemap[7] = s;
                 }
 
@@ -123,6 +122,16 @@ namespace Game
             }
         }
 
+        public static void Win()
+        {
+            if (!IsWin)
+            {
+                MessageBox.Show("Вы победили!\nСоздатель: Пренко Вячеслав (ПП22)", "Победа", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                IsWin = true;
+                win.Close();
+            } 
+        }
+
         private static void Win_Resized(object sender, SizeEventArgs e)
         {
             //win.SetView(new View(new FloatRect(0, 0, e.Width, e.Height)));
@@ -133,6 +142,7 @@ namespace Game
         {
             win.Close();
         }
+
         private static void FPS()
         {
             Time time = clock.ElapsedTime;
