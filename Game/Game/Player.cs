@@ -88,7 +88,7 @@ namespace Game
                         if ((dy > 0) && (dir == 1)) { rect.Top = i * 32 - rect.Height;dy = 0;OnGround = true;}
                         if ((dy < 0) && (dir == 1)) { rect.Top = i * 32+32;dy = 0; OnGround = false; }
                     }
-                    if (Map.tilemap[i][j] == 'L' && dy>0) { if (time + 1 < clock.ElapsedTime.AsSeconds())Damage(1);dy = -15f; }
+                    if (Map.tilemap[i][j] == 'L' && dy>0) { if (time + 1 < clock.ElapsedTime.AsSeconds())Damage(1); }
                     if (Map.tilemap[i][j] == 'S')
                      {
                         string s = Map.tilemap[i];

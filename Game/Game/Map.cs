@@ -78,31 +78,18 @@ namespace Game
                     }
                     if (decorMap[x][y] == 'P')
                     {
-                        rectdecor.TextureRect = new IntRect(0, 325, 91, 117);
-                        rectdecor.Size = new Vector2f(91, 117);
-                        rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - 117/2-Player.offsetY);
-                        target.Draw(rectdecor);
+                        IntitRect(rectdecor, 0, 325, x, y, 91, 117, 1, target);
                     }
                     if (decorMap[x][y] == '1')
                     {
-                        rectdecor.TextureRect = new IntRect(84, 609, 44, 34);
-                        rectdecor.Size = new Vector2f(44, 34);
-                        rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - Player.offsetY);
-                        target.Draw(rectdecor);
+                        IntitRect(rectdecor, 84, 609, x, y, 44, 34, 1, target);
                     }
                     if (decorMap[x][y] == '2')
                     {
-                        rectdecor.TextureRect = new IntRect(0, 654, 87, 34);
-                        rectdecor.Size = new Vector2f(87, 34);
-                        rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - Player.offsetY);
-                        target.Draw(rectdecor);
+                        IntitRect(rectdecor, 0, 654, x, y, 87, 34, 1, target);
                     }
                     if (decorMap[x][y] == 'Z')
                     {
-                        /*rectdecor.TextureRect = new IntRect(96, 0, 111, 34);
-                        rectdecor.Size = new Vector2f(87, 34);
-                        rectdecor.Position = new Vector2f(32 * y - Player.offsetX, 32 * x - Player.offsetY);
-                        target.Draw(rectdecor);*/
                         IntitRect(rectMarioSet, 96, 0, x, y, 108, 111, 2, target);
                     }
 
@@ -161,12 +148,12 @@ namespace Game
                 "0                                 H                         IIIIIII                                       I           IIIIIIIII                        I I                    I                           0",
                 "0                                 I     SSS                       I                                       I            I     I                        I  I                    I                           0",
                 "0                                       IIII       I              I                                       I            I  S  I                       I   I                    I                           0",
-                "0                                                                 IIIIIIIII                               I            I     I                      I    I                    I                           0",
-                "0                        S                                         IS               H                     I           IIIIIIIII                    I     I                    I                           0",
-                "0                                                                  IS               I                      IIIIIIII    I     I                    I      I                    I                           0",
-                "0                                                                  I              III                                                            I       I                    I                           0",
-                "0                        S                      II       S         I         I   IISS                                                           I        I                    I                           0",
-                "0                        I                            IIII         ISSS      ILLIIISS                                                          I         I                    I                           0",
+                "0                                                                 IIIIIIIII                               I            I     I                      I    I                    I                       Z   0",
+                "0                        S                                         IS               H                     I           IIIIIIIII                    I     I                    I                       Z   0",
+                "0                                                                  IS               I                      IIIIIIII    I     I                    I      I                    I                       Z   0",
+                "0                                                                  I              III                                                            I       I                    I                       Z   0",
+                "0                        S                      II       S         I         I   IISS                                                           I        I                    I                       Z   0",
+                "0                        I                            IIII         ISSS      ILLIIISS                                                          I         I                    I                       Z   0",
                 "0                 I      I                                         IIIIIIIIIIIIIIIISS                                                         I          I                    I                       Z   0",
                 "0                 I      I                                                        ISS                                                        I           I                    I                       Z   0",
                 "0                 I      I                                                        III                               SS                      I            I                    8                       Z   0",
