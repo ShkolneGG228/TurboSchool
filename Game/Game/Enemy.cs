@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Game
 {
-    public abstract class Enemy : Drawable
+    abstract class Enemy : Drawable
     {
         public bool life = true;
         public float dx, dy, x, y;
@@ -53,7 +53,7 @@ namespace Game
         }
     }
 
-    public class Bat : Enemy
+     class Bat : Enemy
     {
         const int SCORE_FOR_KILL = 7;
         float time;
@@ -132,7 +132,7 @@ namespace Game
         }
     }
 
-    public class EnemyMario : Enemy
+     class EnemyMario : Enemy
     {
         const int SCORE_FOR_KILL = 3;
         bool OnGround;

@@ -27,7 +27,6 @@ namespace Game
             textureTrees = new Texture(CONTENT_DIR + "Tree.png");
             MonsterEnemy = new Texture(CONTENT_DIR + "EnemyMonstr.png");
             font = new Font(CONTENT_DIR + "Dpix_8pt.ttf");
-            Player.Load();
         }
     }
 }

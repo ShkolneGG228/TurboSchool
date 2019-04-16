@@ -4,9 +4,9 @@ using SFML.System;
 namespace Game
 {
 
-    public class Player : Transformable, Drawable
+    class Player : Transformable, Drawable
     {
-        const int MAX_LIFES = 15;
+        public const int MAX_LIFES = 3;
 
         public float dx = 0, dy = 0;
         public bool OnGround = false;
@@ -23,23 +23,28 @@ namespace Game
 
         public double currentFrame = 0;
 
-        public FloatRect rect = new FloatRect(64, 300, 26, 48);
+        public FloatRect rect;
         RectangleShape rectangle = new RectangleShape(new Vector2f(26,48));
 
         static Sprite player;
 
-        public static void Load()
+        Game game;
+        public Player() { }
+        public Player(int x, int y, Game Game_)
         {
+            game = Game_;
+            offsetX = 0;
+            Program.score = 0;
+            rect = new FloatRect(x, y, 26, 48);
             player = new Sprite();
             player.Texture = Content.texturePlayer;
-            player.TextureRect =new IntRect(0, 0, 32, 32);
+            player.TextureRect = new IntRect(0, 0, 32, 32);
             player.Scale = new Vector2f(1.5f, 1.5f);
-            
         }
 
         public void Update()
         {
-            if (lifes == 0) { Program.win.Close(); }
+            
             if (time+1 < clock.ElapsedTime.AsSeconds()) { player.Color = Color.White; }
             rect.Left += dx;
             Collision(0);
@@ -69,10 +74,10 @@ namespace Game
             }
 
             player.Position = new Vector2f(rect.Left - offsetX - 12, rect.Top-offsetY);
-            rectangle.Position = new Vector2f(rect.Left - offsetX + 12, rect.Top-offsetY);{ 
-}
+            rectangle.Position = new Vector2f(rect.Left - offsetX + 12, rect.Top-offsetY);
             if(rect.Left>400 && rect.Left<Map.WORLD_WIDTH*32-800/2)offsetX = rect.Left - 800/2;
             if (rect.Top < Map.WOLRD_HEIGHT*32-600/2 && rect.Top>32*10) { offsetY = rect.Top - 600 / 2; }
+            if (lifes == 0) { game.Restart(); }
         }
 
         void Collision(int dir)
@@ -80,7 +85,7 @@ namespace Game
             for(int i =(int)rect.Top/32;i<(rect.Top+rect.Height)/32;i++)
                 for(int j = (int)rect.Left / 32; j < (rect.Left + rect.Width) / 32; j++)
                 {
-                    if (Map.tilemap[i][j] == 'Z') { Program.Win(); }
+                    if (Map.tilemap[i][j] == 'Z') { game.Win(); }
                     if (Map.tilemap[i][j] == 'B' || Map.tilemap[i][j] == '0' || Map.tilemap[i][j] == 'Q' || Map.tilemap[i][j] == 'I' || Map.tilemap[i][j] == '8')
                     {
                         if ((dx > 0)&&(dir==0)) { rect.Left = j * 32 - rect.Width; }

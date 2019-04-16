@@ -66,3 +66,50 @@ C:\work\TurboSchool\Game\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
 C:\work\TurboSchool\Game\Game\obj\Debug\Game.csproj.CopyComplete
 C:\work\TurboSchool\Game\Game\obj\Debug\Game.exe
 C:\work\TurboSchool\Game\Game\obj\Debug\Game.pdb
+D:\ПП22_Пренко\Game-master\Game\bin\Debug\Game.exe.config
+D:\ПП22_Пренко\Game-master\Game\obj\Debug\Game.exe
+D:\ПП22_Пренко\Game-master\Game\obj\Debug\Game.pdb
+D:\ПП22_Пренко\Game-master\Game\bin\Debug\Game.exe
+D:\ПП22_Пренко\Game-master\Game\bin\Debug\Game.pdb
+D:\ПП22_Пренко\Game-master\Game\bin\Debug\sfmlnet-audio-2.pdb
+D:\ПП22_Пренко\Game-master\Game\bin\Debug\sfmlnet-audio-2.xml
+D:\ПП22_Пренко\Game-master\Game\bin\Debug\sfmlnet-graphics-2.pdb
+D:\ПП22_Пренко\Game-master\Game\bin\Debug\sfmlnet-graphics-2.xml
+D:\ПП22_Пренко\Game-master\Game\bin\Debug\sfmlnet-system-2.pdb
+D:\ПП22_Пренко\Game-master\Game\bin\Debug\sfmlnet-system-2.xml
+D:\ПП22_Пренко\Game-master\Game\bin\Debug\sfmlnet-window-2.pdb
+D:\ПП22_Пренко\Game-master\Game\bin\Debug\sfmlnet-window-2.xml
+D:\ПП22_Пренко\Game-master\Game\obj\Debug\Game.csprojResolveAssemblyReference.cache
+F:\Game-master\Game\bin\Debug\Game.exe.config
+F:\Game-master\Game\bin\Debug\Game.exe
+F:\Game-master\Game\bin\Debug\Game.pdb
+F:\Game-master\Game\bin\Debug\sfmlnet-audio-2.pdb
+F:\Game-master\Game\bin\Debug\sfmlnet-audio-2.xml
+F:\Game-master\Game\bin\Debug\sfmlnet-graphics-2.pdb
+F:\Game-master\Game\bin\Debug\sfmlnet-graphics-2.xml
+F:\Game-master\Game\bin\Debug\sfmlnet-system-2.pdb
+F:\Game-master\Game\bin\Debug\sfmlnet-system-2.xml
+F:\Game-master\Game\bin\Debug\sfmlnet-window-2.pdb
+F:\Game-master\Game\bin\Debug\sfmlnet-window-2.xml
+F:\Game-master\Game\obj\Debug\Game.csprojResolveAssemblyReference.cache
+F:\Game-master\Game\obj\Debug\Game.exe
+F:\Game-master\Game\obj\Debug\Game.pdb
+F:\Вячеслав Пренко\Game\bin\Debug\Game.exe.config
+F:\Вячеслав Пренко\Game\obj\Debug\Game.exe
+F:\Вячеслав Пренко\Game\obj\Debug\Game.pdb
+D:\Вячеслав Пренко\Game\bin\Debug\Game.exe.config
+D:\Вячеслав Пренко\Game\bin\Debug\Game.exe
+D:\Вячеслав Пренко\Game\bin\Debug\Game.pdb
+D:\Вячеслав Пренко\Game\bin\Debug\sfmlnet-audio-2.pdb
+D:\Вячеслав Пренко\Game\bin\Debug\sfmlnet-audio-2.xml
+D:\Вячеслав Пренко\Game\bin\Debug\sfmlnet-graphics-2.pdb
+D:\Вячеслав Пренко\Game\bin\Debug\sfmlnet-graphics-2.xml
+D:\Вячеслав Пренко\Game\bin\Debug\sfmlnet-system-2.pdb
+D:\Вячеслав Пренко\Game\bin\Debug\sfmlnet-system-2.xml
+D:\Вячеслав Пренко\Game\bin\Debug\sfmlnet-window-2.pdb
+D:\Вячеслав Пренко\Game\bin\Debug\sfmlnet-window-2.xml
+D:\Вячеслав Пренко\Game\obj\Debug\Game.csprojAssemblyReference.cache
+D:\Вячеслав Пренко\Game\obj\Debug\Game.csproj.CoreCompileInputs.cache
+D:\Вячеслав Пренко\Game\obj\Debug\Game.csproj.CopyComplete
+D:\Вячеслав Пренко\Game\obj\Debug\Game.exe
+D:\Вячеслав Пренко\Game\obj\Debug\Game.pdb

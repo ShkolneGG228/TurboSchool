@@ -2,9 +2,6 @@
 using SFML.System;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Game
 {
@@ -100,7 +97,6 @@ namespace Game
             {
                 for (int y = 0; y < WORLD_WIDTH; y++)
                 {
-
                     //if (tilemap[x][y] == ' ' || tilemap[x][y] == '0' || tilemap[x][y] == 'K') { continue; }
                     if (tilemap[x][y] == 'B') rect.TextureRect = new IntRect(32, 32, 32, 32);////grass
                     else if (tilemap[x][y] == 'L') { rect.TextureRect = new IntRect(128, 192, 32, 32); }//lava

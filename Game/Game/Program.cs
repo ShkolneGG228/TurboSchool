@@ -11,65 +11,50 @@ namespace Game
         public static RenderWindow win;
         static Clock clock = new Clock();
         public static int score;
-        public static bool IsWin = false;
+        public static int k;
         static void Main(string[] args)
         {
-            score=0;
+            Game game = new Game();
+            score =0;
             win = new RenderWindow(new VideoMode(800, 600), "My Game");
             win.SetVerticalSyncEnabled(true);
             win.Closed += Win_Closed;
             win.Resized += Win_Resized;
             win.Size = new Vector2u(800, 600);
 
-            Content.Load();
-
             Text textScore = new Text("", Content.font, 22);
             textScore.Position = new Vector2f(5, 5);
             Text textLifes = new Text("", Content.font, 22);
             textLifes.Position = new Vector2f(5, 34);
             textLifes.Color = Color.Red;
-
-            Player p = new Player();
-
-            Enemy[] enemies = new Enemy[8];
-            enemies[0] = new EnemyMario(700,20*32+19,1f);
-            enemies[1] = new EnemyMario(32*75, 32*16+16,5f);
-            enemies[2] = new EnemyMario(32 * 97, 20*32+19,2f);
-            enemies[3] = new Bat(900, 400, 5f, 5f);
-            enemies[4] = new Bat(32 * 160, 500, 3f, 3f);
-            enemies[5] = new Bat(32 * 155, 300, -3f, 3f);
-            enemies[6] = new EnemyMario(32 * 155, 20*32+19, 2f);
-            enemies[7] = new EnemyMario(32 * 169, 20*32+19, -2f);
-
-            Map map = new Map();
-            map.GenerateWorld();
+ 
             Clock clock = new Clock();
 
-            int k = 0;
+            k = 0;
             while (win.IsOpen)
             {
                 if (Keyboard.IsKeyPressed(Keyboard.Key.Left))
                 {
-                    p.dx = -5.5f;
-                    p.Direction = -1;
+                    game.p.dx = -5.5f;
+                    game.p.Direction = -1;
                 }
                 if (Keyboard.IsKeyPressed(Keyboard.Key.Right))
                 {
-                    p.dx = 5.5f;
-                    p.Direction = 1;
+                    game.p.dx = 5.5f;
+                    game.p.Direction = 1;
                 }
                 if (Keyboard.IsKeyPressed(Keyboard.Key.Space))
                 {
-                    if (p.OnGround) { p.dy = -20f; p.OnGround = false; }
+                    if (game.p.OnGround) { game.p.dy = -20f; game.p.OnGround = false; }
                 }
                 if(!Keyboard.IsKeyPressed(Keyboard.Key.Left) && !Keyboard.IsKeyPressed(Keyboard.Key.Right))
                 {
-                    p.dx = 0;
+                    game.p.dx = 0;
                 }
 
-                p.Update();
+                game.p.Update();
 
-                if (p.rect.Left > 155 * 32 && p.rect.Top > 8 * 32)
+                if (game.p.rect.Left > 155 * 32 && game.p.rect.Top > 8 * 32)
                 {
                     string s = Map.tilemap[7];
                     s = s.Remove(154, 2);
@@ -77,7 +62,7 @@ namespace Game
                     Map.tilemap[7] = s;
                 }
 
-                if (k == 0 && !enemies[4].Life && !enemies[5].Life && !enemies[6].Life && !enemies[7].Life)
+                if (k == 0 && !game.enemies[4].Life && !game.enemies[5].Life && !game.enemies[6].Life && !game.enemies[7].Life)
                 {
                     string s = Map.tilemap[20];
                     s = s.Remove(174, 1);
@@ -89,31 +74,29 @@ namespace Game
                     Map.tilemap[21] = s;
                     k++;
                 }
-                
-
 
                 win.DispatchEvents();
 
                 win.Clear(Color.Black);
 
-                win.Draw(map);
+                win.Draw(game.map);
 
-                for (int i = 0; i < enemies.Length; i++)
+                for (int i = 0; i < game.enemies.Length; i++)
                 {
-                    enemies[i].Update();
-                    if (p.rect.Intersects(enemies[i].rect))
+                    game.enemies[i].Update();
+                    if (game.p.rect.Intersects(game.enemies[i].rect))
                     {
-                        if (enemies[i].Life)
+                        if (game.enemies[i].Life)
                         {
-                            enemies[i].CollisionWithCharacter(p);
+                            game.enemies[i].CollisionWithCharacter(game.p);
                         }
                     }
-                    win.Draw(enemies[i]);
+                    win.Draw(game.enemies[i]);
                 }
-                win.Draw(p);
+                win.Draw(game.p);
 
                 textScore.DisplayedString = "Количество очков: " +score.ToString();
-                textLifes.DisplayedString = "Жизни: " + p.lifes.ToString();
+                textLifes.DisplayedString = "Жизни: " + game.p.lifes.ToString();
                 win.Draw(textScore);
                 win.Draw(textLifes);
                 win.Display();
@@ -122,19 +105,8 @@ namespace Game
             }
         }
 
-        public static void Win()
-        {
-            if (!IsWin)
-            {
-                MessageBox.Show("Вы победили!\nСоздатель: Пренко Вячеслав (ПП22)", "Победа", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                IsWin = true;
-                win.Close();
-            } 
-        }
-
         private static void Win_Resized(object sender, SizeEventArgs e)
         {
-            //win.SetView(new View(new FloatRect(0, 0, e.Width, e.Height)));
             win.Size = new Vector2u(800, 600);
         }
 
